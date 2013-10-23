@@ -11,7 +11,7 @@
 	font-weight: normal;
 	line-height: normal;
 	height:auto;
-	margin: .15em 6px 0.1em 6px;
+	margin: .15em 6px 0.1em 0px;
 	padding: 5px;
 	transition: none;
 	vertical-align: middle;
@@ -22,4 +22,9 @@
 	border-color: #94ccda;
 	.box-shadow-custom( ~'0 1px 1px 0px #f2f2f2 inset, 0 0 5px 0 #94ccda' );
 	outline: auto;
+}
+
+[dir='rtl'] .vui-input[type="text"] {
+	margin-left: 6px;
+	margin-right: 0px;
 }
