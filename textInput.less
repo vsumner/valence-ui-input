@@ -1,5 +1,8 @@
-﻿.vui-input[type="text"],
-.vui-input[type="password"] {
+﻿.vui-input,
+.vui-input[type="email"],
+.vui-input[type="text"],
+.vui-input[type="password"],
+.vui-input[type="url"] {
 	background-color: #ffffff;
 	border: 1px solid #cccccc;
 	.border-radius( 3px );
@@ -19,15 +22,21 @@
 	width: auto;
 }
 
+.vui-input:focus,
+.vui-input[type="email"]:focus,
 .vui-input[type="text"]:focus,
-.vui-input[type="password"]:focus {
+.vui-input[type="password"]:focus,
+.vui-input[type="url"]:focus {
 	border-color: #94ccda;
 	.box-shadow-custom( ~'0 1px 1px 0px #f2f2f2 inset, 0 0 5px 0 #94ccda' );
 	outline-width: 0px;
 }
 
+[dir='rtl'] .vui-input,
+[dir='rtl'] .vui-input[type="email"],
 [dir='rtl'] .vui-input[type="text"],
-[dir='rtl'] .vui-input[type="password"] {
+[dir='rtl'] .vui-input[type="password"],
+[dir='rtl'] .vui-input[type="url"] {
 	margin-left: 6px;
 	margin-right: 0px;
 }
