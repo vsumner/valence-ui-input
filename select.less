@@ -1,0 +1,50 @@
+﻿@import '..\..\less\valenceui.less';
+
+.vui-select {
+	.input-box;
+	width: 100%;
+}
+
+/* Customizing the style of the drow arrow is a hack in all browsers.
+ * This hack users a background image and hides the default dropdown arrow when possible.
+ * The follwoing rules target specific browers where the customization hack works. 
+ * In all other browsers, the default unstyle dropdown arrow is displayed
+ */
+
+ .vui-select-custom-dropdown() {
+ 	background-image: url(select-arrow.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+ }
+
+/* IE10+ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.vui-select:not([multiple])::-ms-expand {
+	    display: none;
+	}
+
+	.vui-select:not([multiple]) {
+		.vui-select-custom-dropdown;
+	    padding-right: 30px;   
+	}
+}
+
+/* Chrome/Safari */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.vui-select:not([multiple]) {
+		.vui-select-custom-dropdown;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+	    padding-right: 30px;	    
+	}
+}
+
+/* Recent Firefox */
+@media screen and (min--moz-device-pixel-ratio:0) {
+	.vui-select:not([multiple]) {
+	    .vui-select-custom-dropdown;
+		text-indent: 0.01px;
+	    text-overflow: '';
+	    padding-right: 10px; 
+	}
+}
