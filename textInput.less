@@ -1,4 +1,6 @@
-﻿.vui-input,
+﻿@import '..\..\less\valenceui.less';
+
+.vui-input,
 .vui-input[type="email"],
 .vui-input[type="text"],
 .vui-input[type="password"],
@@ -15,11 +17,11 @@
 	font-weight: normal;
 	line-height: normal;
 	height: auto;
-	margin: .15em 6px 0.1em 0px;
+	margin: 0;
 	padding: 5px;
 	transition: none;
 	vertical-align: middle;
-	width: auto;
+	width: 100%;
 }
 
 .vui-input:focus,
@@ -30,13 +32,4 @@
 	border-color: #94ccda;
 	.box-shadow-custom( ~'0 1px 1px 0px #f2f2f2 inset, 0 0 5px 0 #94ccda' );
 	outline-width: 0px;
-}
-
-[dir='rtl'] .vui-input,
-[dir='rtl'] .vui-input[type="email"],
-[dir='rtl'] .vui-input[type="text"],
-[dir='rtl'] .vui-input[type="password"],
-[dir='rtl'] .vui-input[type="url"] {
-	margin-left: 6px;
-	margin-right: 0px;
 }
