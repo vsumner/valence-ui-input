@@ -4,21 +4,23 @@
 
 		options: {
 			MaxHeight: 0,
-            MinHeight: 20
+            MinHeight: '20px'
 		},
 
 		_create: function() {
 			var $longEdit = $( this.element );
-
-			this.options.MaxHeight = $longEdit.attr( 'data-longedit-maxheight' ) !== undefined ? $longEdit.attr( 'data-longedit-maxheight' ) : this.options.MaxHeight;
+            var op = this.options;
+            
+			op.MaxHeight = $longEdit.attr( 'data-longedit-maxheight' ) !== undefined ? $longEdit.attr( 'data-longedit-maxheight' ) : op.MaxHeight;
+            op.MinHeight = $longEdit.attr( 'data-longedit-minheight' ) !== undefined ? $longEdit.attr( 'data-longedit-minheight' ) : op.MinHeight;
 
 			var that = this;
 			$longEdit.keydown( function( e ) {
-				that._textAreaAdjust( $longEdit, that.options.MaxHeight, that.options.MinHeight );
+				that._textAreaAdjust( $longEdit, op.MaxHeight, op.MinHeight );
 			} );
 
 			$longEdit.change( function( e ) {
-				that._textAreaAdjust( $longEdit, that.options.MaxHeight, that.options.MinHeight );
+				that._textAreaAdjust( $longEdit, op.MaxHeight, op.MinHeight );
 			} );
 		},
 
@@ -26,16 +28,19 @@
 
 			$longEdit[0].style.height = '0px';
 			$longEdit[0].style.padding = '0px';
-			var h = $longEdit[0].scrollHeight;
-
-			if( h < inMinHeight ) {
-                $longEdit[0].css('overflow', 'hidden');
-                $longEdit[0].style.height = '20px';
-			} else if( inMaxHeight && h > inMaxHeight ) {
-                $longEdit[0].style.height = inMaxHeight + 'px';
-                $longEdit[0].css('overflow', 'auto');
+			
+            var h = $longEdit[0].scrollHeight;
+            var min = parseInt( inMinHeight, 10 );
+            var max = parseInt( inMaxHeight, 10 );
+            
+			if( h < min ) {
+                $longEdit.css('overflow', 'hidden');
+                $longEdit[0].style.height = inMinHeight;
+			} else if( max && h > max ) {
+                $longEdit[0].style.height = inMaxHeight;
+                $longEdit.css('overflow', 'auto');
 			} else {
-                $longEdit[0].css('overflow', 'hidden');
+                $longEdit.css('overflow', 'hidden');
                 $longEdit[0].style.height = $longEdit[0].scrollHeight + 'px';
 			}
             $longEdit.trigger( 'vui-longedit-change' );
