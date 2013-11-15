@@ -8,13 +8,16 @@
 		},
 
 		_create: function() {
-			var $longEdit = $( this.element );
+			
+            var $longEdit = $( this.element );
             var op = this.options;
+            var that = this;
             
 			op.MaxHeight = $longEdit.attr( 'data-longedit-maxheight' ) !== undefined ? $longEdit.attr( 'data-longedit-maxheight' ) : op.MaxHeight;
             op.MinHeight = $longEdit.attr( 'data-longedit-minheight' ) !== undefined ? $longEdit.attr( 'data-longedit-minheight' ) : op.MinHeight;
-
-			var that = this;
+            
+            $longEdit[0].style.height = op.MinHeight;
+            
 			$longEdit.keydown( function( e ) {
 				that._textAreaAdjust( $longEdit, op.MaxHeight, op.MinHeight );
 			} );
