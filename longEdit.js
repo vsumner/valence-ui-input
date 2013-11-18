@@ -25,6 +25,8 @@
 			$longEdit.change( function( e ) {
 				that._textAreaAdjust( $longEdit, op.MaxHeight, op.MinHeight );
 			} );
+            
+            this._textAreaAdjust( $longEdit, op.MaxHeight, op.MinHeight );
 		},
 
 		_textAreaAdjust: function( $longEdit, inMaxHeight, inMinHeight ) {
