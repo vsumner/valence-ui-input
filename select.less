@@ -30,38 +30,39 @@
  * In all other browsers, the default unstyle dropdown arrow is displayed
  */
 
- .select-mixin-background-position-hidden() {
+.select-mixin-background-position-hidden() {
 	background-position: -10000px -10000px;
- }
+}
 
- .select-mixin-background-position-visible( @padding: 30px  ) {
+.select-mixin-background-position-visible( @padding: 30px  ) {
 	background-position: right center;
 	padding-right: @padding;   
- }
+}
 
- .select-mixin-background-position-visible-rtl( @padding: 30px ) {
+.select-mixin-background-position-visible-rtl( @padding: 30px ) {
 	background-position: left center;
 	padding-right: 0px;   
 	padding-left: @padding; 
- }
+}
 
- .vui-select:not([multiple]) {
+.vui-select:not([multiple]) {
 	.select-mixin-background-position-hidden;
-  	background-image: data-uri('image/png;base64','..\src\controls\select\select-background.png');
+	background-image: data-uri('image/png;base64','..\src\controls\select\select-background.png');
 	background-repeat: no-repeat;
 
- }
+}
 
 [dir='rtl'] .vui-select:not([multiple]) {
 	.select-mixin-background-position-hidden;
-  	background-image: data-uri('image/png;base64','..\src\controls\select\select-background-rtl.png');
+	background-image: data-uri('image/png;base64','..\src\controls\select\select-background-rtl.png');
 	background-repeat: no-repeat;
 }
 
 /* IE10+ */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	
 	.vui-select:not([multiple])::-ms-expand {
-	    display: none;
+		display: none;
 	}
 
 	.vui-select:not([multiple]) {
@@ -71,10 +72,12 @@
 	[dir='rtl'] .vui-select:not([multiple]) {
 		 .select-mixin-background-position-visible-rtl; 
 	}
+
 }
 
 /* Chrome/Safari */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
+	
 	.vui-select:not([multiple]) {
 		.select-mixin-background-position-visible; 
 		-webkit-appearance: none;
@@ -84,18 +87,21 @@
 	[dir='rtl'] .vui-select:not([multiple]) {
 		 .select-mixin-background-position-visible-rtl;
 	}
+
 }
 
 /* Recent Firefox */
 @media screen and (min--moz-device-pixel-ratio:0) {
+	
 	.vui-select:not([multiple]) {
 		.select-mixin-background-position-visible( 10px );
 		text-indent: 0.01px;
-	    text-overflow: '' !important;
-	    padding-right: 10px; 
+		text-overflow: '' !important;
+	 	padding-right: 10px; 
 	}
 
 	[dir='rtl'] .vui-select:not([multiple]) {
 		 .select-mixin-background-position-visible-rtl( 10px );
 	}
+	
 }
