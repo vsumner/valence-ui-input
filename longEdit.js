@@ -1,4 +1,6 @@
-( function( $ ) {
+( function( vui, $ ) {
+
+	$ = vui.$;
 
 	$.widget( "vui.vui_longEdit", {
 
@@ -8,16 +10,16 @@
 		},
 
 		_create: function() {
-			
+
             var $longEdit = $( this.element );
             var op = this.options;
             var that = this;
-            
+
 			op.MaxHeight = $longEdit.attr( 'data-longedit-maxheight' ) !== undefined ? $longEdit.attr( 'data-longedit-maxheight' ) : op.MaxHeight;
             op.MinHeight = $longEdit.attr( 'data-longedit-minheight' ) !== undefined ? $longEdit.attr( 'data-longedit-minheight' ) : op.MinHeight;
-            
+
             $longEdit[0].style.height = op.MinHeight;
-            
+
 			$longEdit.keydown( function( e ) {
 				that._textAreaAdjust( $longEdit, op.MaxHeight, op.MinHeight );
 			} );
@@ -25,7 +27,7 @@
 			$longEdit.change( function( e ) {
 				that._textAreaAdjust( $longEdit, op.MaxHeight, op.MinHeight );
 			} );
-            
+
             this._textAreaAdjust( $longEdit, op.MaxHeight, op.MinHeight );
 		},
 
@@ -33,11 +35,11 @@
 
 			$longEdit[0].style.height = '0px';
 			$longEdit[0].style.padding = '0px';
-			
+
             var h = $longEdit[0].scrollHeight;
             var min = parseInt( inMinHeight, 10 );
             var max = parseInt( inMaxHeight, 10 );
-            
+
 			if( h < min ) {
                 $longEdit.css('overflow', 'hidden');
                 $longEdit[0].style.height = inMinHeight;
@@ -59,4 +61,4 @@
 		}
 	);
 
-} )( window.jQuery );
+} )( window.vui );
