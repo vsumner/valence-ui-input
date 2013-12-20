@@ -31,8 +31,8 @@
 			var op = this.options;
 			var that = this;
 
-			op.MaxHeight = $longEdit.attr( 'data-longedit-maxheight' ) !== undefined ? $longEdit.attr( 'data-longedit-maxheight' ) : op.MaxHeight;
-			op.MinHeight = $longEdit.attr( 'data-longedit-minheight' ) !== undefined ? $longEdit.attr( 'data-longedit-minheight' ) : op.MinHeight;
+			op.MaxHeight = $longEdit.attr( 'data-longedit-maxheight' ) || $longEdit.css('max-height') || op.MaxHeight;
+			op.MinHeight = $longEdit.attr( 'data-longedit-minheight' ) || $longEdit.css('min-height') || op.MinHeight;
 
 			$longEdit[0].style.height = op.MinHeight;
 
