@@ -21,18 +21,24 @@
 	$.widget( "vui.vui_longEdit", {
 
 		options: {
-			MaxHeight: 0,
+			MaxHeight: 'none',
 			MinHeight: '20px'
 		},
 
 		_create: function () {
 			var $longEdit = $(this.element),
-				minHeight = $longEdit.attr('data-longedit-minheight') || $longEdit.css('min-height') || op.MinHeight,
-				maxHeight = $longEdit.attr('data-longedit-maxheight') || $longEdit.css('max-height') || op.MaxHeight;
+				minHeight = $longEdit.attr('data-longedit-minheight') ||
+					$longEdit.css('min-height') !== 'none' && $longEdit.css('min-height') ||
+					this.options.MinHeight,
+				maxHeight = $longEdit.attr('data-longedit-maxheight') ||
+					$longEdit.css('max-height') !== 'none' && $longEdit.css('max-height') ||
+					this.options.MaxHeight;
 
 			// normalize height values by setting and retrieving them on the element
-			$longEdit[0].style.height = maxHeight;
-			maxHeight = $longEdit.height();
+			if (maxHeight !== 'none') {
+				$longEdit[0].style.height = maxHeight;
+				maxHeight = $longEdit.height();
+			}
 
 			$longEdit[0].style.height = minHeight;
 			minHeight = $longEdit.height();
@@ -57,7 +63,9 @@
 			var currentHeight = $longEdit[0].scrollHeight - padding;
 
 			var setHeight = Math.max(minHeight, currentHeight);
-			setHeight = setHeight > maxHeight ? maxHeight : setHeight;
+			if (maxHeight !== 'none') {
+				setHeight = setHeight > maxHeight ? maxHeight : setHeight;
+			}
 
 			$longEdit
 				.height(setHeight)
