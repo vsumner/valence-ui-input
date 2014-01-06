@@ -26,6 +26,8 @@
 		},
 
 		_create: function () {
+			var self = this;
+
 			var $longEdit = $(this.element),
 				minHeight = $longEdit.attr('data-longedit-minheight') ||
 					$longEdit.css('min-height') !== 'none' && $longEdit.css('min-height') ||
@@ -44,7 +46,11 @@
 			minHeight = $longEdit.height();
 
 			// bind the adjust function with all values
-			var populatedAdjust = this._textAreaAdjust.bind(this, $longEdit, minHeight, maxHeight);
+			var populatedAdjust = !!Function.prototype.bind ?
+				this._textAreaAdjust.bind(this, $longEdit, minHeight, maxHeight) :
+				function () {
+					self._textAreaAdjust($longEdit, minHeight, maxHeight);
+				};
 
 			$longEdit.keyup(populatedAdjust);
 			$longEdit.change(populatedAdjust);
