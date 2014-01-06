@@ -25,49 +25,46 @@
 			MinHeight: '20px'
 		},
 
-		_create: function() {
+		_create: function () {
+			var $longEdit = $(this.element),
+				minHeight = $longEdit.attr('data-longedit-minheight') || $longEdit.css('min-height') || op.MinHeight,
+				maxHeight = $longEdit.attr('data-longedit-maxheight') || $longEdit.css('max-height') || op.MaxHeight;
 
-			var $longEdit = $( this.element );
-			var op = this.options;
-			var that = this;
+			// normalize height values by setting and retrieving them on the element
+			$longEdit[0].style.height = maxHeight;
+			maxHeight = $longEdit.height();
 
-			op.MaxHeight = $longEdit.attr( 'data-longedit-maxheight' ) || $longEdit.css('max-height') || op.MaxHeight;
-			op.MinHeight = $longEdit.attr( 'data-longedit-minheight' ) || $longEdit.css('min-height') || op.MinHeight;
+			$longEdit[0].style.height = minHeight;
+			minHeight = $longEdit.height();
 
-			$longEdit[0].style.height = op.MinHeight;
+			// bind the adjust function with all values
+			var populatedAdjust = this._textAreaAdjust.bind(this, $longEdit, minHeight, maxHeight);
 
-			$longEdit.keydown( function( e ) {
-				that._textAreaAdjust( $longEdit, op.MaxHeight, op.MinHeight );
-			} );
+			$longEdit.keyup(populatedAdjust);
+			$longEdit.change(populatedAdjust);
 
-			$longEdit.change( function( e ) {
-				that._textAreaAdjust( $longEdit, op.MaxHeight, op.MinHeight );
-			} );
+			$longEdit.css('overflow-y', 'hidden');
 
-			this._textAreaAdjust( $longEdit, op.MaxHeight, op.MinHeight );
+			populatedAdjust();
 		},
 
-		_textAreaAdjust: function( $longEdit, inMaxHeight, inMinHeight ) {
+		_textAreaAdjust: function ($longEdit, minHeight, maxHeight) {
+			var padding = $longEdit.innerHeight() - $longEdit.height();
 
-			$longEdit[0].style.height = '0px';
-			$longEdit[0].style.padding = '0px';
+			$longEdit
+				.height(minHeight);
 
-			var h = $longEdit[0].scrollHeight;
-			var min = parseInt( inMinHeight, 10 );
-			var max = parseInt( inMaxHeight, 10 );
+			var currentHeight = $longEdit[0].scrollHeight - padding;
 
-			if( h < min ) {
-				$longEdit.css('overflow', 'hidden');
-				$longEdit[0].style.height = inMinHeight;
-			} else if( max && h > max ) {
-				$longEdit[0].style.height = inMaxHeight;
-				$longEdit.css('overflow', 'auto');
-			} else {
-				$longEdit.css('overflow', 'hidden');
-				$longEdit[0].style.height = $longEdit[0].scrollHeight + 'px';
-			}
-			$longEdit.trigger( 'vui-longedit-change' );
+			var setHeight = Math.max(minHeight, currentHeight);
+			setHeight = setHeight > maxHeight ? maxHeight : setHeight;
+
+			$longEdit
+				.height(setHeight)
+				.css('overflow-y', setHeight === maxHeight ? 'auto' : 'hidden')
+				.trigger('vui-longedit-change');
 		}
+
 	} );
 
 	vui.addClassInitializer(
