@@ -18,7 +18,7 @@
 
 	var $ = vui.$;
 
-	$.widget( "vui.vui_longEdit", {
+	$.widget( "vui.vui_autoresize", {
 
 		options: {
 			MaxHeight: 'none',
@@ -28,63 +28,63 @@
 		_create: function () {
 			var self = this;
 
-			var $longEdit = $(this.element),
-				minHeight = $longEdit.attr('data-longedit-minheight') ||
-					$longEdit.css('min-height') !== 'none' && $longEdit.css('min-height') ||
+			var textarea = $(this.element),
+				minHeight = textarea.attr('data-autoresize-minheight') ||
+					textarea.css('min-height') !== 'none' && textarea.css('min-height') ||
 					this.options.MinHeight,
-				maxHeight = $longEdit.attr('data-longedit-maxheight') ||
-					$longEdit.css('max-height') !== 'none' && $longEdit.css('max-height') ||
+				maxHeight = textarea.attr('data-autoresize-maxheight') ||
+					textarea.css('max-height') !== 'none' && textarea.css('max-height') ||
 					this.options.MaxHeight;
 
 			// normalize height values by setting and retrieving them on the element
 			if (maxHeight !== 'none') {
-				$longEdit[0].style.height = maxHeight;
-				maxHeight = $longEdit.height();
+				textarea[0].style.height = maxHeight;
+				maxHeight = textarea.height();
 			}
 
-			$longEdit[0].style.height = minHeight;
-			minHeight = $longEdit.height();
+			textarea[0].style.height = minHeight;
+			minHeight = textarea.height();
 
 			// bind the adjust function with all values
 			var populatedAdjust = !!Function.prototype.bind ?
-				this._textAreaAdjust.bind(this, $longEdit, minHeight, maxHeight) :
+				this._textAreaAdjust.bind(this, textarea, minHeight, maxHeight) :
 				function () {
-					self._textAreaAdjust($longEdit, minHeight, maxHeight);
+					self._textAreaAdjust(textarea, minHeight, maxHeight);
 				};
 
-			$longEdit.keyup(populatedAdjust);
-			$longEdit.change(populatedAdjust);
+			textarea.keyup(populatedAdjust);
+			textarea.change(populatedAdjust);
 
-			$longEdit.css('overflow-y', 'hidden');
+			textarea.css('overflow-y', 'hidden');
 
 			populatedAdjust();
 		},
 
-		_textAreaAdjust: function ($longEdit, minHeight, maxHeight) {
-			var padding = $longEdit.innerHeight() - $longEdit.height();
+		_textAreaAdjust: function (textarea, minHeight, maxHeight) {
+			var padding = textarea.innerHeight() - textarea.height();
 
-			$longEdit
+			textarea
 				.height(minHeight);
 
-			var currentHeight = $longEdit[0].scrollHeight - padding;
+			var currentHeight = textarea[0].scrollHeight - padding;
 
 			var setHeight = Math.max(minHeight, currentHeight);
 			if (maxHeight !== 'none') {
 				setHeight = setHeight > maxHeight ? maxHeight : setHeight;
 			}
 
-			$longEdit
+			textarea
 				.height(setHeight)
 				.css('overflow-y', setHeight === maxHeight ? 'auto' : 'hidden')
-				.trigger('vui-longedit-change');
+				.trigger('vui-autoresize-change');
 		}
 
 	} );
 
 	vui.addClassInitializer(
-		'vui-longedit',
+		'vui-autoresize',
 		function( node ) {
-			$( node ).vui_longEdit();
+			$( node ).vui_autoresize();
 		}
 	);
 
