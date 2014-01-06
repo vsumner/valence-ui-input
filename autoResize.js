@@ -29,10 +29,10 @@
 			var self = this;
 
 			var textarea = $(this.element),
-				minHeight = textarea.attr('data-autoresize-minheight') ||
+				minHeight = textarea.attr('data-min-height') ||
 					textarea.css('min-height') !== 'none' && textarea.css('min-height') ||
 					this.options.MinHeight,
-				maxHeight = textarea.attr('data-autoresize-maxheight') ||
+				maxHeight = textarea.attr('data-max-height') ||
 					textarea.css('max-height') !== 'none' && textarea.css('max-height') ||
 					this.options.MaxHeight;
 
