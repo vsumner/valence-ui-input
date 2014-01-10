@@ -1,6 +1,6 @@
 @import '../../core/core';
 
-.vui-select {
+select.vui-input {
 	.input-box;
 	width: 100%;
 	vertical-align: middle;
@@ -12,13 +12,13 @@
 	padding-bottom: (@inputPadding - 1);
 }
 
-.vui-select optgroup {
+select.vui-input optgroup {
 	color: @headingColour;
 	font-style: normal;
 	font-weight: bold;
 }
 
-.vui-select option {
+select.vui-input option {
 	color: #000000;
 	font-style: normal;
 	font-weight: normal;
@@ -45,13 +45,13 @@
 	padding-left: @padding;
 }
 
-.vui-select:not([multiple]) {
+select.vui-input:not([multiple]) {
 	.select-mixin-background-position-hidden;
 	background-image: data-uri('image/png;base64','controls/select/select-background.png');
 	background-repeat: no-repeat;
 }
 
-[dir='rtl'] .vui-select:not([multiple]) {
+[dir='rtl'] select.vui-input:not([multiple]) {
 	.select-mixin-background-position-hidden;
 	background-image: data-uri('image/png;base64','controls/select/select-background-rtl.png');
 	background-repeat: no-repeat;
@@ -60,15 +60,15 @@
 /* IE10+ */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
 
-	.vui-select:not([multiple])::-ms-expand {
+	select.vui-input:not([multiple])::-ms-expand {
 		display: none;
 	}
 
-	.vui-select:not([multiple]) {
+	select.vui-input:not([multiple]) {
 		 .select-mixin-background-position-visible;
 	}
 
-	[dir='rtl'] .vui-select:not([multiple]) {
+	[dir='rtl'] select.vui-input:not([multiple]) {
 		 .select-mixin-background-position-visible-rtl;
 	}
 
@@ -77,13 +77,13 @@
 /* Chrome/Safari */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 
-	.vui-select:not([multiple]) {
+	select.vui-input:not([multiple]) {
 		.select-mixin-background-position-visible;
 		-webkit-appearance: none;
 		-moz-appearance: none;
 	}
 
-	[dir='rtl'] .vui-select:not([multiple]) {
+	[dir='rtl'] select.vui-input:not([multiple]) {
 		 .select-mixin-background-position-visible-rtl;
 	}
 
@@ -92,14 +92,14 @@
 /* Recent Firefox */
 @media screen and (min--moz-device-pixel-ratio:0) {
 
-	.vui-select:not([multiple]) {
+	select.vui-input:not([multiple]) {
 		.select-mixin-background-position-visible( 10px );
 		text-indent: 0.01px;
 		text-overflow: '' !important;
 		padding-right: 10px;
 	}
 
-	[dir='rtl'] .vui-select:not([multiple]) {
+	[dir='rtl'] select.vui-input:not([multiple]) {
 		 .select-mixin-background-position-visible-rtl( 10px );
 	}
 }
