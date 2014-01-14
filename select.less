@@ -1,0 +1,105 @@
+@import '../../core/core';
+
+select.vui-input {
+	.input-box;
+	width: 100%;
+	vertical-align: middle;
+
+	/* Select heights are always 2 pixels more than inputs and buttons in all font sizes and
+	 * all browsers so subtracting 2 pixels to get same height across
+	 */
+	padding-top: (@inputPadding - 1);
+	padding-bottom: (@inputPadding - 1);
+}
+
+select.vui-input optgroup {
+	color: @headingColour;
+	font-style: normal;
+	font-weight: bold;
+}
+
+select.vui-input option {
+	color: #000000;
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* Customizing the style of the drow arrow is a hack in all browsers.
+ * This hack users a background image and hides the default dropdown arrow when possible.
+ * The follwoing rules target specific browers where the customization hack works.
+ * In all other browsers, the default unstyle dropdown arrow is displayed
+ */
+
+.select-mixin-background-position-hidden() {
+	background-position: -10000px -10000px;
+}
+
+.select-mixin-background-position-visible( @padding: 30px  ) {
+	background-position: right center;
+	padding-right: @padding;
+}
+
+.select-mixin-background-position-visible-rtl( @padding: 30px ) {
+	background-position: left center;
+	padding-right: 0px;
+	padding-left: @padding;
+}
+
+select.vui-input:not([multiple]) {
+	.select-mixin-background-position-hidden;
+	background-image: data-uri('image/png;base64','controls/select/select-background.png');
+	background-repeat: no-repeat;
+}
+
+[dir='rtl'] select.vui-input:not([multiple]) {
+	.select-mixin-background-position-hidden;
+	background-image: data-uri('image/png;base64','controls/select/select-background-rtl.png');
+	background-repeat: no-repeat;
+}
+
+/* IE10+ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+	select.vui-input:not([multiple])::-ms-expand {
+		display: none;
+	}
+
+	select.vui-input:not([multiple]) {
+		 .select-mixin-background-position-visible;
+	}
+
+	[dir='rtl'] select.vui-input:not([multiple]) {
+		 .select-mixin-background-position-visible-rtl;
+	}
+
+}
+
+/* Chrome/Safari */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+	select.vui-input:not([multiple]) {
+		.select-mixin-background-position-visible;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+	}
+
+	[dir='rtl'] select.vui-input:not([multiple]) {
+		 .select-mixin-background-position-visible-rtl;
+	}
+
+}
+
+/* Recent Firefox */
+@media screen and (min--moz-device-pixel-ratio:0) {
+
+	select.vui-input:not([multiple]) {
+		.select-mixin-background-position-visible( 10px );
+		text-indent: 0.01px;
+		text-overflow: '' !important;
+		padding-right: 10px;
+	}
+
+	[dir='rtl'] select.vui-input:not([multiple]) {
+		 .select-mixin-background-position-visible-rtl( 10px );
+	}
+}
