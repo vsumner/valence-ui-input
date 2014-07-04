@@ -47,14 +47,24 @@ select.vui-input option {
 
 select.vui-input:not([multiple]) {
 	.select-mixin-background-position-hidden;
-	background-image: data-uri('image/png;base64','controls/select/select-background.png');
+	background-image: data-uri('image/png;base64','controls/select/select-background-off.png');
 	background-repeat: no-repeat;
 }
 
 [dir='rtl'] select.vui-input:not([multiple]) {
 	.select-mixin-background-position-hidden;
-	background-image: data-uri('image/png;base64','controls/select/select-background-rtl.png');
+	background-image: data-uri('image/png;base64','controls/select/select-background-rtl-off.png');
 	background-repeat: no-repeat;
+}
+
+select.vui-input:not([multiple]):focus,
+select.vui-input:not([multiple]):hover {
+    background-image: data-uri('image/png;base64','controls/select/select-background-on.png');
+}
+
+[dir='rtl'] select.vui-input:not([multiple]):focus,
+[dir='rtl'] select.vui-input:not([multiple]):hover {
+    background-image: data-uri('image/png;base64','controls/select/select-background-rtl-on.png');
 }
 
 /* IE10+ */
@@ -71,7 +81,6 @@ select.vui-input:not([multiple]) {
 	[dir='rtl'] select.vui-input:not([multiple]) {
 		 .select-mixin-background-position-visible-rtl;
 	}
-
 }
 
 /* Chrome/Safari */
