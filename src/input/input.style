@@ -1,0 +1,21 @@
+@import 'input';
+
+.vui-input,
+.vui-input[type="email"],
+.vui-input[type="text"],
+.vui-input[type="password"],
+.vui-input[type="url"] {
+	.vui-input();
+}
+
+.vui-input[type="checkbox"] {
+	.vui-checkbox();
+}
+
+.vui-input[type="radio"] {
+	.vui-radio();
+}
+
+textarea.vui-input {
+	.vui-textarea();
+}

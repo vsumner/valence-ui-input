@@ -1,19 +1,41 @@
-@import '../../core/core';
+@import '../input-box';
+@import '../../node_modules/vui-focus/dist/focus.less';
 
-.vui-input,
-.vui-input[type="email"],
-.vui-input[type="text"],
-.vui-input[type="password"],
-.vui-input[type="url"] {
-	.input-box;
+.vui-input() {
+	.vui-input-box();
 	vertical-align: middle;
 	width: 100%;
 }
 
-.vui-input[type="checkbox"],
-.vui-input[type="radio"] {
+.vui-checkbox() {
+	&:extend(.vui-input);
 	background-color: transparent;
 	border: none;
 	box-shadow: none;
+	min-height: 0;
 	padding: 0;
+	width: auto;
+	&:focus {
+		.vui-focusOutline();
+		outline-offset: 0;
+	};
+}
+
+.vui-radio() {
+	&:extend(.vui-input);
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+	min-height: 0;
+	padding: 0;
+	width: auto;
+	&:focus {
+		.vui-focusOutline();
+		outline-offset: 0;
+	};
+}
+
+.vui-textarea() {
+	line-height: 1.25em;
+	overflow: auto;
 }
