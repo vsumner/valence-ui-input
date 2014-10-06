@@ -3,6 +3,7 @@
 @vui-inputBorderColor: #cccccc;
 @vui-inputBorderRadius: 3px;
 @vui-inputBoxShadowColor: #f2f2f2;
+@vui-inputDisabledColor: #666666;
 @vui-inputPadding: 5px;
 @vui-inputFocusColor: #94ccda;
 
@@ -22,7 +23,8 @@
 		@inputBorderColor: @vui-inputBorderColor,
 		@inputBorderRadius: @vui-inputBorderRadius,
 		@inputBoxShadowColor: @vui-inputBoxShadowColor,
-		@inputFocusColor: @vui-inputFocusColor
+		@inputFocusColor: @vui-inputFocusColor,
+		@inputDisabledColor: @vui-inputDisabledColor
 	) {
 
 	.vui-input-box-border( @inputBorderWidth, @inputBorderColor, @inputBorderRadius );
@@ -49,7 +51,7 @@
 	}
 
 	&:disabled {
-		color: #666666;
+		color: @inputDisabledColor;
 	}
 
 }

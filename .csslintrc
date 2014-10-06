@@ -2,5 +2,6 @@
 	"box-sizing": false,
 	"compatible-vendor-prefixes": false,
 	"known-properties": false,
+	"important": false,
 	"unqualified-attributes": false
 }
