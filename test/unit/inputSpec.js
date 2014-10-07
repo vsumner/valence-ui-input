@@ -87,7 +87,7 @@
 				expect( urlInput ).toHavePadding( '5px' );
 			} );
 
-			it( 'has x height', function() {
+			it( 'has 36px height', function() {
 				expect( textInput ).toHaveHeight( '36px' );
 				expect( emailInput ).toHaveHeight( '36px' );
 				expect( passwordInput ).toHaveHeight( '36px' );
