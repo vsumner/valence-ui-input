@@ -19,41 +19,34 @@
 			document.body.removeChild( container );
 		} );
 
+		var createInput = function( type ) {
+			var input = container.appendChild( document.createElement( 'input' ) );
+			input.type = type;
+			input.className = 'vui-input';
+			return input;
+		};
+
+		var getComputedValue = function( element, property ) {
+			return window.getComputedStyle( element ).getPropertyValue( property );
+		};
+
 		describe( 'input', function() { 
 
-			var textInput, emailInput, passwordInput, urlInput;
-
-			var createInput = function( type ) {
-				var input = container.appendChild( document.createElement( 'input' ) );
-				input.type = type;
-				input.className = 'vui-input';
-				return input;
-			};
-
-			var getComputedValue = function( element, property ) {
-				return window.getComputedStyle( element ).getPropertyValue( property );
-			};
+			var textInput, emailInput, passwordInput, urlInput, checkboxInput, radioInput;
 
 			beforeEach( function () {
 				textInput = createInput( 'text' );
 				emailInput = createInput( 'text' );
 				passwordInput = createInput( 'password' );
 				urlInput = createInput( 'url' );
+				checkboxInput = createInput( 'checkbox' );
+				radioInput = createInput( 'radio' );
 			} );
 
 			it( 'defines selectors', function() {
 				expect( document ).toHaveCssSelector( '.vui-input' );
 				expect( document ).toHaveCssSelector( '.vui-input:focus' );
 				expect( document ).toHaveCssSelector( '.vui-input:disabled' );
-				expect( document ).toHaveCssSelector( '.vui-input[type="text"]' );
-				expect( document ).toHaveCssSelector( '.vui-input[type="text"]:focus' );
-				expect( document ).toHaveCssSelector( '.vui-input[type="email"]:disabled' );
-				expect( document ).toHaveCssSelector( '.vui-input[type="password"]' );
-				expect( document ).toHaveCssSelector( '.vui-input[type="password"]:focus' );
-				expect( document ).toHaveCssSelector( '.vui-input[type="password"]:disabled' );
-				expect( document ).toHaveCssSelector( '.vui-input[type="url"]' );
-				expect( document ).toHaveCssSelector( '.vui-input[type="url"]:focus' );
-				expect( document ).toHaveCssSelector( '.vui-input[type="url"]:disabled' );
 			} );
 
 			it( 'has white background color', function() {
@@ -168,6 +161,124 @@
 					expect( urlInput ).toHaveColor( 'rgb(0, 0, 0)' );
 				} );
 
+			} );
+
+		} );
+
+		describe( 'input text', function() { 
+
+			it( 'defines selectors', function() {
+				expect( document ).toHaveCssSelector( '.vui-input[type="text"]' );
+				expect( document ).toHaveCssSelector( '.vui-input[type="text"]:focus' );
+				expect( document ).toHaveCssSelector( '.vui-input[type="text"]:disabled' );
+			} );
+
+		} );
+
+		describe( 'input email', function() { 
+
+			it( 'defines selectors', function() {
+				expect( document ).toHaveCssSelector( '.vui-input[type="email"]' );
+				expect( document ).toHaveCssSelector( '.vui-input[type="email"]:focus' );
+				expect( document ).toHaveCssSelector( '.vui-input[type="email"]:disabled' );
+			} );
+
+		} );
+
+		describe( 'input password', function() { 
+
+			it( 'defines selectors', function() {
+				expect( document ).toHaveCssSelector( '.vui-input[type="password"]' );
+				expect( document ).toHaveCssSelector( '.vui-input[type="password"]:focus' );
+				expect( document ).toHaveCssSelector( '.vui-input[type="password"]:disabled' );
+			} );
+
+		} );
+
+		describe( 'input url', function() { 
+
+			it( 'defines selectors', function() {
+				expect( document ).toHaveCssSelector( '.vui-input[type="url"]' );
+				expect( document ).toHaveCssSelector( '.vui-input[type="url"]:focus' );
+				expect( document ).toHaveCssSelector( '.vui-input[type="url"]:disabled' );
+			} );
+
+		} );
+
+		describe( 'input checkbox', function() { 
+
+			var input;
+
+			beforeEach( function () {
+				input = createInput( 'checkbox' );
+			} );
+
+			it( 'defines selectors', function() {
+				expect( document ).toHaveCssSelector( '.vui-input[type="checkbox"]' );
+				expect( document ).toHaveCssSelector( '.vui-input[type="checkbox"]:focus' );
+			} );
+
+			it( 'has transparent background color', function() {
+				expect( input ).toHaveBackgroundColor( 'rgba(0, 0, 0, 0)' );
+			} );
+
+			it( 'has no border', function() {
+				expect( input ).toHaveBorderStyle( 'none' );
+			} );
+
+			it( 'has 0 padding', function() {
+				expect( input ).toHavePadding( '0px' );
+			} );
+
+			it( 'has default width', function() {
+				expect( input ).toHaveWidth( '13px' );
+			} );
+
+			it( 'has default min height', function() {
+				expect( input ).toHaveMinHeight( '13px' );
+			} );
+
+			it( 'has no box shadow', function() {
+				expect( input ).toHaveBoxShadow( 'none' );
+			} );
+
+		} );
+
+		describe( 'input radio', function() { 
+
+			var input;
+
+			beforeEach( function () {
+				input = createInput( 'checkbox' );
+			} );
+
+			it( 'defines selectors', function() {
+				expect( document ).toHaveCssSelector( '.vui-input[type="radio"]' );
+				expect( document ).toHaveCssSelector( '.vui-input[type="radio"]:focus' );
+			} );
+
+			it( 'has transparent background color', function() {
+				expect( input ).toHaveBackgroundColor( 'rgba(0, 0, 0, 0)' );
+			} );
+
+			it( 'has no border', function() {
+				expect( input ).toHaveBorderStyle( 'none' );
+			} );
+
+			it( 'has 0 padding', function() {
+				expect( input ).toHavePadding( '0px' );
+			} );
+
+			it( 'has default width', function() {
+				expect( input ).toHaveWidth( '13px' );
+			} );
+
+			it( 'has default min-height', function() {
+				expect( input ).toHaveMinHeight( '13px' );
+			} );
+
+			it( 'has no box shadow', function() {
+				expect( input ).toHaveBoxShadow( 'none' );
 			} );
 
 		} );
