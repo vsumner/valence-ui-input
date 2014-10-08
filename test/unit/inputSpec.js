@@ -32,15 +32,13 @@
 
 		describe( 'input', function() { 
 
-			var textInput, emailInput, passwordInput, urlInput, checkboxInput, radioInput;
+			var textInput, emailInput, passwordInput, urlInput;
 
 			beforeEach( function () {
 				textInput = createInput( 'text' );
 				emailInput = createInput( 'text' );
 				passwordInput = createInput( 'password' );
 				urlInput = createInput( 'url' );
-				checkboxInput = createInput( 'checkbox' );
-				radioInput = createInput( 'radio' );
 			} );
 
 			it( 'defines selectors', function() {
