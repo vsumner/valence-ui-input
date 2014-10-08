@@ -30,6 +30,10 @@
 				return input;
 			};
 
+			var getComputedValue = function( element, property ) {
+				return window.getComputedStyle( element ).getPropertyValue( property );
+			};
+
 			beforeEach( function () {
 				textInput = createInput( 'text' );
 				emailInput = createInput( 'text' );
@@ -88,10 +92,11 @@
 			} );
 
 			it( 'has 36px height', function() {
-				expect( textInput ).toHaveHeight( '36px' );
-				expect( emailInput ).toHaveHeight( '36px' );
-				expect( passwordInput ).toHaveHeight( '36px' );
-				expect( urlInput ).toHaveHeight( '36px' );
+				var expected = { default: { default: '38px', Windows: '36px' } };
+				expect( getComputedValue( textInput, 'height' ) ).toBeOnAgent( expected );
+				expect( getComputedValue( emailInput, 'height' ) ).toBeOnAgent( expected );
+				expect( getComputedValue( passwordInput, 'height' ) ).toBeOnAgent( expected );
+				expect( getComputedValue( urlInput, 'height' ) ).toBeOnAgent( expected );
 			} );
 
 			it( 'has 100% width', function() {
