@@ -25,6 +25,10 @@
 			return option;
 		};
 
+		var getComputedValue = function( element, property ) {
+			return window.getComputedStyle( element ).getPropertyValue( property );
+		};
+
 		describe( 'select single', function() { 
 
 			var select, option1;
@@ -68,7 +72,8 @@
 			} );
 
 			it( 'has 34px height', function() {
-				expect( select ).toHaveHeight( '34px' );
+				var expected = { default: { default: '36px', Windows: '34px' } };
+				expect( getComputedValue( select, 'height' ) ).toBeOnAgent( expected );
 			} );
 
 			it( 'has 100% width', function() {
