@@ -1,6 +1,6 @@
 {
   "name": "vui-input",
-  "description": "Valence.UI input behavior",
+  "description": "LESS mixins and CSS for applying input styles",
   "version": "0.0.0",
   "author": "D2L Corporation",
   "license": "Apache-2.0",
