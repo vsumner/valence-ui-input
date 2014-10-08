@@ -33,6 +33,7 @@ select {
 }
 ```
 
+Here's what your corresponding HTML would look like:
 ```html
 <input type="text" />
 <input type="password" />
@@ -54,34 +55,6 @@ your application's CSS. Then apply the `vui-input` CSS class to elements:
 <input class="vui-input" type="url" />
 <textarea class="vui-input"></textarea>
 <select class="vui-input"></select>
-```
-
-##Selects
-
-Styles can be applied to `<select>` elements by adding the .vui-input class.
-
-```css
-@import 'node_modules/vui-button/dist/label'
-
-.myFieldRow > label {
-	.vui-label();
-}
-```
-
-```html
-<div class="myFieldRow">
-    <label for="name">Name</label>
-    <input type="text" id="name" />
-</div>
-```
-
-Or, with CSS instead using the `vui-label` class:
-
-```html
-<div class="vui-field-row">
-    <label class="vui-label" for="name">Name</label>
-    <input type="text" id="name" />
-</div>
 ```
 
 ##Building
