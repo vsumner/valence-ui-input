@@ -1,25 +1,45 @@
-@import 'input';
+@import 'input-checkbox';
+@import 'input-email';
+@import 'input-password';
+@import 'input-radio';
+@import 'input-text';
+@import 'input-url';
+@import 'select';
+@import 'textarea';
 
-.vui-input,
-.vui-input[type="email"],
-.vui-input[type="text"],
-.vui-input[type="password"],
-.vui-input[type="url"] {
-	.vui-input();
-}
 
-select.vui-input {
-	.vui-select();
-}
-
-textarea.vui-input {
-	.vui-textarea();
+.vui-input {
+	#vui.input();
 }
 
 .vui-input[type="checkbox"] {
-	.vui-checkbox();
+	#vui.input-checkbox();
+}
+
+.vui-input[type="email"] {
+	#vui.input-email();
+}
+
+.vui-input[type="password"] {
+	#vui.input-password();
 }
 
 .vui-input[type="radio"] {
-	.vui-radio();
+	#vui.input-radio();
+}
+
+.vui-input[type="text"] {
+	#vui.input-text();
+}
+
+.vui-input[type="url"] {
+	#vui.input-url();
+}
+
+textarea.vui-input {
+	#vui.input-textarea();
+}
+
+select.vui-input {
+	#vui.input-select();
 }
