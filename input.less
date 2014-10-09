@@ -1,150 +1,85 @@
-@import 'input-box';
 @import 'node_modules/vui-focus/focus';
-@import 'node_modules/vui-typography/typography';
 
-@vui-selectHeadingColor: @vui-headingFontColor;
-@vui-selectOptionColor: #000000;
+@vui-inputBackgroundColor: #ffffff;
+@vui-inputBorderWidth: 1px;
+@vui-inputBorderColor: #cccccc;
+@vui-inputBorderStyle: solid;
+@vui-inputBorderRadius: 3px;
+@vui-inputBoxShadow: 0 1px 1px 0 #f2f2f2 inset;
+@vui-inputColor: initial;
+@vui-inputDisabledColor: #666666;
+@vui-inputFocusColor: #94ccda;
+@vui-inputLineHeight: normal;
+@vui-inputPadding: 5px;
+@vui-inputMinHeight: 28px;
 
-.vui-input() {
-	.vui-input-box();
-	vertical-align: middle;
-	width: 100%;
-}
+#vui {
 
-.vui-checkbox() {
-	&:extend(.vui-input);
-	background-color: transparent;
-	border: none;
-	box-shadow: none;
-	min-height: 0;
-	padding: 0;
-	width: auto;
-
-	&:focus {
-		.vui-focusOutline();
-		outline-offset: 0;
-	};
-
-}
-
-.vui-radio() {
-	&:extend(.vui-input);
-	background-color: transparent;
-	border: none;
-	box-shadow: none;
-	min-height: 0;
-	padding: 0;
-	width: auto;
-	&:focus {
-		.vui-focusOutline();
-		outline-offset: 0;
-	};
-}
-
-.vui-textarea() {
-	line-height: 1.25em;
-	overflow: auto;
-}
-
-.vui-select() {
-
-	&:extend(.vui-input);
-
-	// Select heights are always 2 pixels more than inputs and buttons in all font sizes and
-	// all browsers so subtracting 2 pixels to get same height across
-
-	padding-top: ( @vui-inputPadding - 1);
-	padding-bottom: (@vui-inputPadding - 1);
-
-	optgroup {
-		color: @vui-selectHeadingColor;
-		font-style: normal;
-		font-weight: bold;
+	.input-border(
+			@width: @vui-inputBorderWidth,
+			@color: @vui-inputBorderColor,
+			@style: @vui-inputBorderStyle,
+			@radius: @vui-inputBorderRadius
+		) {
+		border: @width @style @color;
+		border-radius: @radius;
 	}
 
-	option {
-		color: @vui-selectOptionColor;
-		font-style: normal;
+	.input( 
+			@color: @vui-inputColor,
+			@backgroundColor: @vui-inputBackgroundColor,
+			@borderWidth: @vui-inputBorderWidth,
+			@borderColor: @vui-inputBorderColor,
+			@borderStyle: @vui-inputBorderStyle,
+			@borderRadius: @vui-inputBorderRadius,
+			@boxShadow: @vui-inputBoxShadow,
+			@minHeight: @vui-inputMinHeight,
+			@focusColor: @vui-inputFocusColor,
+			@focusOutlineWidth: @vui-focusOutlineWidth,
+			@focusOutlineColor: @vui-focusOutlineColor,
+			@focusOutlineStyle: none,
+			@disabledColor: @vui-inputDisabledColor,
+			@lineHeight: @vui-inputLineHeight,
+			@padding: @vui-inputPadding,
+			@width: 100%
+		) {
+
+		#vui.input-border( 
+				@width: @borderWidth,
+				@color: @borderColor,
+				@style: @borderStyle,
+				@radius: @borderRadius
+			);
+
+		background-color: @backgroundColor;
+		box-shadow: @boxShadow;
+		box-sizing: border-box;
+		color: @color;
+		display: inline-block;
+		font-family: inherit;
+		font-size: inherit;
 		font-weight: normal;
-	}
+		height: auto;
+		line-height: @lineHeight;
+		margin: 0;
+		min-height: @minHeight;
+		padding: @padding;
+		transition: none;
+		vertical-align: middle;
+		width: @width;
 
-	// Customizing the style of the drow arrow is a hack in all browsers.
- 	// This hack users a background image and hides the default dropdown arrow when possible.
- 	// The follwoing rules target specific browers where the customization hack works.
- 	// In all other browsers, the default unstyle dropdown arrow is displayed
-
-	&:not([multiple]) {
-		background-position: -10000px -10000px;
-		background-image: data-uri('image/png;base64','select-background-off.png');
-		background-repeat: no-repeat;
-
-		[dir='rtl'] & {
-			background-image: data-uri('image/png;base64','select-background-rtl-off.png');
+		&:focus {
+			border-color: @focusColor;
+			box-shadow: @boxShadow, 0 0 5px 0 @focusColor;
+			#vui.focusOutline(
+					@outlineWidth: @focusOutlineWidth,
+					@outlineColor: @focusOutlineStyle,
+					@outlineStyle: @focusOutlineColor
+				);
 		}
 
-	}
-
-	&:not([multiple]):focus,
-	&:not([multiple]):hover {
-		background-image: data-uri('image/png;base64','select-background-on.png');
-
-		[dir='rtl'] & {
-			background-image: data-uri('image/png;base64','select-background-rtl-on.png');
-		}
-	}
-
-	// IE10+ //
-	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-
-		&:not([multiple])::-ms-expand {
-			display: none;
-		}
-
-		&:not([multiple]) {
-			background-position: right center;
-			padding-right: 30px;
-		}
-
-		[dir='rtl'] &:not([multiple]) {
-			background-position: left center;
-			padding-right: @vui-inputPadding;
-			padding-left: 30px;
-		}
-
-	}
-
-	// Chrome/Safari //
-	@media screen and (-webkit-min-device-pixel-ratio :0) {
-
-		&:not([multiple]) {
-			background-position: right center;
-			padding-right: 30px;
-			-webkit-appearance: none;
-			-moz-appearance: none;
-		}
-
-		[dir='rtl'] &:not([multiple]) {
-			background-position: left center;
-			padding-right: @vui-inputPadding;
-			padding-left: 30px;
-		}
-
-	}
-
-	// Recent Firefox //
-	@media screen and (min--moz-device-pixel-ratio: 0) {
-
-		&:not([multiple]) {
-			background-position: right center;
-			padding-right: 10px;
-			text-indent: 0.01px;
-			text-overflow: '' !important;
-		}
-
-		[dir='rtl'] &:not([multiple]) {
-			background-position: left center;
-			padding-right: @vui-inputPadding;
-			padding-left: 10px;
+		&:disabled {
+			color: @disabledColor;
 		}
 
 	}

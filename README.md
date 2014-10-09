@@ -20,16 +20,29 @@ To make use of the LESS mixins, first import the library into your LESS file:
 ```
 
 Styles can be applied to `<input>`, `<textarea>` and `<select>` elements
-using the `vui-input` mixin:
+using the `#vui.input-*` mixins:
 
 ```css
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="url"],
-textarea,
+input {
+  #vui.input();
+}
+input[type="text"] {
+  #vui.input-text();
+}
+input[type="password"] {
+  #vui.input-password();
+}
+input[type="email"] {
+  #vui.input-email();
+}
+input[type="url"] {
+  #vui.input-url();
+}
+textarea {
+  #vui.input-textarea();
+}
 select {
-  .vui-input();
+  #vui.input-select();
 }
 ```
 

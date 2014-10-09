@@ -1,0 +1,114 @@
+@import 'input';
+@import 'node_modules/vui-typography/typography';
+
+@vui-selectHeadingColor: @vui-headingFontColor;
+@vui-selectOptionColor: #000000;
+
+#vui {
+
+	.input-select() {
+
+		#vui.input();
+
+		// Select heights are always 2 pixels more than inputs and buttons in all font sizes and
+		// all browsers so subtracting 2 pixels to get same height across
+
+		padding-top: ( @vui-inputPadding - 1);
+		padding-bottom: (@vui-inputPadding - 1);
+
+		optgroup {
+			color: @vui-selectHeadingColor;
+			font-style: normal;
+			font-weight: bold;
+		}
+
+		option {
+			color: @vui-selectOptionColor;
+			font-style: normal;
+			font-weight: normal;
+		}
+
+		// Customizing the style of the drow arrow is a hack in all browsers.
+	 	// This hack users a background image and hides the default dropdown arrow when possible.
+	 	// The follwoing rules target specific browers where the customization hack works.
+	 	// In all other browsers, the default unstyle dropdown arrow is displayed
+
+		&:not([multiple]) {
+			background-position: -10000px -10000px;
+			background-image: data-uri('image/png;base64','select-background-off.png');
+			background-repeat: no-repeat;
+
+			[dir='rtl'] & {
+				background-image: data-uri('image/png;base64','select-background-rtl-off.png');
+			}
+
+		}
+
+		&:not([multiple]):focus,
+		&:not([multiple]):hover {
+			background-image: data-uri('image/png;base64','select-background-on.png');
+
+			[dir='rtl'] & {
+				background-image: data-uri('image/png;base64','select-background-rtl-on.png');
+			}
+		}
+
+		// IE10+ //
+		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+			&:not([multiple])::-ms-expand {
+				display: none;
+			}
+
+			&:not([multiple]) {
+				background-position: right center;
+				padding-right: 30px;
+			}
+
+			[dir='rtl'] &:not([multiple]) {
+				background-position: left center;
+				padding-right: @vui-inputPadding;
+				padding-left: 30px;
+			}
+
+		}
+
+		// Chrome/Safari //
+		@media screen and (-webkit-min-device-pixel-ratio :0) {
+
+			&:not([multiple]) {
+				background-position: right center;
+				padding-right: 30px;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+			}
+
+			[dir='rtl'] &:not([multiple]) {
+				background-position: left center;
+				padding-right: @vui-inputPadding;
+				padding-left: 30px;
+			}
+
+		}
+
+		// Recent Firefox //
+		@media screen and (min--moz-device-pixel-ratio: 0) {
+
+			&:not([multiple]) {
+				background-position: right center;
+				padding-right: 10px;
+				text-indent: 0.01px;
+				text-overflow: '' !important;
+			}
+
+			[dir='rtl'] &:not([multiple]) {
+				background-position: left center;
+				padding-right: @vui-inputPadding;
+				padding-left: 10px;
+			}
+
+		}
+
+	}
+
+}
