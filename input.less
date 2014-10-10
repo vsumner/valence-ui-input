@@ -35,9 +35,6 @@
 			@boxShadow: @vui-inputBoxShadow,
 			@minHeight: @vui-inputMinHeight,
 			@focusColor: @vui-inputFocusColor,
-			@focusOutlineWidth: @vui-focusOutlineWidth,
-			@focusOutlineColor: @vui-focusOutlineColor,
-			@focusOutlineStyle: none,
 			@disabledColor: @vui-inputDisabledColor,
 			@lineHeight: @vui-inputLineHeight,
 			@padding: @vui-inputPadding,
@@ -71,11 +68,7 @@
 		&:focus {
 			border-color: @focusColor;
 			box-shadow: @boxShadow, 0 0 5px 0 @focusColor;
-			#vui.focusOutline(
-					@outlineWidth: @focusOutlineWidth,
-					@outlineColor: @focusOutlineStyle,
-					@outlineStyle: @focusOutlineColor
-				);
+			outline-width: 0;
 		}
 
 		&:disabled {
