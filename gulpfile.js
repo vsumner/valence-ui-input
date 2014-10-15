@@ -1,9 +1,9 @@
 var gulp = require( 'gulp' ),
+	del = require( 'del' ),
 	vui = require( 'vui-helpers' );
 
-gulp.task( 'clean', function() {
-	return gulp.src( [ 'input.css' ], { read: false } )
-		.pipe( vui.clean() );
+gulp.task( 'clean', function( cb ) {
+	del([ 'input.css' ], cb);
 } );
 
 gulp.task( 'css', function () {
@@ -15,9 +15,10 @@ gulp.task( 'default', [ 'clean' ], function() {
 } );
 
 gulp.task( 'test', function () {
-	return vui.test(
-			'test/unit/karma.conf.js',
+	return vui.test( {
+		files: [
 			'test/unit/**/*Spec.js',
 			'input.css'
-		);
+		]
+	} ) ;
 } );
