@@ -4,7 +4,7 @@
 
 	.input-checkbox() {
 
-		#vui.input( 
+		#vui.input(
 				@padding: 0,
 				@backgroundColor: transparent,
 				@borderStyle: none,
@@ -12,7 +12,10 @@
 				@minHeight: 0,
 				@width: auto
 			);
-		#vui.focusOutline();
+			
+		&:focus {
+			#vui.focusOutline();
+		}
 
 	}
 
