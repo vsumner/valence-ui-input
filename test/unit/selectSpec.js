@@ -6,7 +6,7 @@
 		var container;
 
 		beforeEach( function () {
-			jasmine.addMatchers( d2l.jasmine.matchers );
+			jasmine.addMatchers( vui.jasmine.dom.matchers );
 			container = document.body.appendChild( document.createElement( 'div' ) );
 			container.style.backgroundColor = 'green';
 			container.style.fontFamily = 'arial';
@@ -29,7 +29,7 @@
 			return window.getComputedStyle( element ).getPropertyValue( property );
 		};
 
-		describe( 'select single', function() { 
+		describe( 'select single', function() {
 
 			var select, option1;
 
@@ -104,7 +104,7 @@
 				expect( select ).toHaveBackgroundRepeat( 'no-repeat' );
 			} );
 
-			describe( 'option', function() { 
+			describe( 'option', function() {
 
 				it( 'has black color', function() {
 					expect( option1 ).toHaveColor( 'rgb(0, 0, 0)' );
@@ -120,7 +120,7 @@
 
 			} );
 
-			describe( 'disabled', function() { 
+			describe( 'disabled', function() {
 
 				beforeEach( function () {
 					select.disabled = true;
@@ -132,7 +132,7 @@
 
 			} );
 
-			describe( 'readonly', function() { 
+			describe( 'readonly', function() {
 
 				beforeEach( function () {
 					select.readOnly = true;
@@ -144,7 +144,7 @@
 
 			} );
 
-			describe( 'rtl', function() { 
+			describe( 'rtl', function() {
 
 				beforeEach( function () {
 					container.setAttribute( 'dir', 'rtl' );
@@ -166,7 +166,7 @@
 
 		} );
 
-		describe( 'select groups', function() { 
+		describe( 'select groups', function() {
 
 			var select, group1, group2;
 
@@ -205,7 +205,7 @@
 
 		} );
 
-		describe( 'select multiple', function() { 
+		describe( 'select multiple', function() {
 
 			var select;
 
@@ -234,7 +234,7 @@
 				expect( select ).not.toHaveBase64BackgroundImage();
 			} );
 
-			describe( 'rtl', function() { 
+			describe( 'rtl', function() {
 
 				beforeEach( function () {
 					container.setAttribute( 'dir', 'rtl' );
