@@ -6,7 +6,7 @@
 		var container;
 
 		beforeEach( function () {
-			jasmine.addMatchers( d2l.jasmine.matchers );
+			jasmine.addMatchers( vui.jasmine.dom.matchers );
 			container = document.body.appendChild( document.createElement( 'div' ) );
 			container.style.backgroundColor = 'green';
 			container.style.fontFamily = 'arial';
@@ -30,7 +30,7 @@
 			return window.getComputedStyle( element ).getPropertyValue( property );
 		};
 
-		describe( 'input', function() { 
+		describe( 'input', function() {
 
 			var textInput, emailInput, passwordInput, urlInput;
 
@@ -125,7 +125,7 @@
 				expect( urlInput ).toHaveFontSize( '20px' );
 			} );
 
-			describe( 'disabled', function() { 
+			describe( 'disabled', function() {
 
 				beforeEach( function () {
 					textInput.disabled = true;
@@ -143,7 +143,7 @@
 
 			} );
 
-			describe( 'readonly', function() { 
+			describe( 'readonly', function() {
 
 				beforeEach( function () {
 					textInput.readOnly = true;
@@ -163,7 +163,7 @@
 
 		} );
 
-		describe( 'input text', function() { 
+		describe( 'input text', function() {
 
 			it( 'defines selectors', function() {
 				expect( document ).toHaveCssSelector( '.vui-input[type="text"]' );
@@ -173,7 +173,7 @@
 
 		} );
 
-		describe( 'input email', function() { 
+		describe( 'input email', function() {
 
 			it( 'defines selectors', function() {
 				expect( document ).toHaveCssSelector( '.vui-input[type="email"]' );
@@ -183,7 +183,7 @@
 
 		} );
 
-		describe( 'input password', function() { 
+		describe( 'input password', function() {
 
 			it( 'defines selectors', function() {
 				expect( document ).toHaveCssSelector( '.vui-input[type="password"]' );
@@ -193,7 +193,7 @@
 
 		} );
 
-		describe( 'input url', function() { 
+		describe( 'input url', function() {
 
 			it( 'defines selectors', function() {
 				expect( document ).toHaveCssSelector( '.vui-input[type="url"]' );
@@ -203,7 +203,7 @@
 
 		} );
 
-		describe( 'input checkbox', function() { 
+		describe( 'input checkbox', function() {
 
 			var input;
 
@@ -242,7 +242,7 @@
 
 		} );
 
-		describe( 'input radio', function() { 
+		describe( 'input radio', function() {
 
 			var input;
 

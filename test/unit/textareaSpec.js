@@ -6,7 +6,7 @@
 		var container;
 
 		beforeEach( function () {
-			jasmine.addMatchers( d2l.jasmine.matchers );
+			jasmine.addMatchers( vui.jasmine.dom.matchers );
 			container = document.body.appendChild( document.createElement( 'div' ) );
 			container.style.backgroundColor = 'green';
 			container.style.fontFamily = 'arial';
@@ -19,7 +19,7 @@
 			document.body.removeChild( container );
 		} );
 
-		describe( 'textarea', function() { 
+		describe( 'textarea', function() {
 
 			var textarea;
 
@@ -80,7 +80,7 @@
 				expect( textarea ).toHaveOverflow( 'auto' );
 			} );
 
-			describe( 'disabled', function() { 
+			describe( 'disabled', function() {
 
 				beforeEach( function () {
 					textarea.disabled = true;
@@ -92,7 +92,7 @@
 
 			} );
 
-			describe( 'readonly', function() { 
+			describe( 'readonly', function() {
 
 				beforeEach( function () {
 					textarea.readOnly = true;
