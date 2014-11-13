@@ -1,8 +1,8 @@
 @import 'input';
 @import 'node_modules/vui-typography/typography';
 
-@vui-selectHeadingColor: @vui-headingFontColor;
-@vui-selectOptionColor: #000000;
+@vui-select-optionGroup-color: @vui-heading-fontColor;
+@vui-select-option-color: #000000;
 
 #vui {
 
@@ -13,17 +13,17 @@
 		// Select heights are always 2 pixels more than inputs and buttons in all font sizes and
 		// all browsers so subtracting 2 pixels to get same height across
 
-		padding-top: ( @vui-inputPadding - 1);
-		padding-bottom: (@vui-inputPadding - 1);
+		padding-top: ( @vui-input-padding - 1);
+		padding-bottom: (@vui-input-padding - 1);
 
 		optgroup {
-			color: @vui-selectHeadingColor;
+			color: @vui-select-optionGroup-color;
 			font-style: normal;
 			font-weight: bold;
 		}
 
 		option {
-			color: @vui-selectOptionColor;
+			color: @vui-select-option-color;
 			font-style: normal;
 			font-weight: normal;
 		}
@@ -67,7 +67,7 @@
 
 			[dir='rtl'] &:not([multiple]) {
 				background-position: left center;
-				padding-right: @vui-inputPadding;
+				padding-right: @vui-input-padding;
 				padding-left: 30px;
 			}
 
@@ -85,7 +85,7 @@
 
 			[dir='rtl'] &:not([multiple]) {
 				background-position: left center;
-				padding-right: @vui-inputPadding;
+				padding-right: @vui-input-padding;
 				padding-left: 30px;
 			}
 
@@ -103,7 +103,7 @@
 
 			[dir='rtl'] &:not([multiple]) {
 				background-position: left center;
-				padding-right: @vui-inputPadding;
+				padding-right: @vui-input-padding;
 				padding-left: 10px;
 			}
 

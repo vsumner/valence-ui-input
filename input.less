@@ -1,47 +1,47 @@
 @import 'node_modules/vui-focus/focus';
 
-@vui-inputBackgroundColor: #ffffff;
-@vui-inputBorderWidth: 1px;
-@vui-inputBorderColor: #cccccc;
-@vui-inputBorderStyle: solid;
-@vui-inputBorderRadius: 3px;
-@vui-inputBoxShadow: 0 1px 1px 0 #f2f2f2 inset;
-@vui-inputColor: initial;
-@vui-inputDisabledColor: #666666;
-@vui-inputFocusColor: #94ccda;
-@vui-inputLineHeight: normal;
-@vui-inputPadding: 5px;
-@vui-inputMinHeight: 28px;
+@vui-input-backgroundColor: #ffffff;
+@vui-input-borderWidth: 1px;
+@vui-input-borderColor: #cccccc;
+@vui-input-borderStyle: solid;
+@vui-input-borderRadius: 3px;
+@vui-input-boxShadow: 0 1px 1px 0 #f2f2f2 inset;
+@vui-input-color: initial;
+@vui-input-color-disabled: #666666;
+@vui-input-color-focus: #94ccda;
+@vui-input-lineHeight: normal;
+@vui-input-padding: 5px;
+@vui-input-minHeight: 28px;
 
 #vui {
 
 	.input-border(
-			@width: @vui-inputBorderWidth,
-			@color: @vui-inputBorderColor,
-			@style: @vui-inputBorderStyle,
-			@radius: @vui-inputBorderRadius
+			@width: @vui-input-borderWidth,
+			@color: @vui-input-borderColor,
+			@style: @vui-input-borderStyle,
+			@radius: @vui-input-borderRadius
 		) {
 		border: @width @style @color;
 		border-radius: @radius;
 	}
 
-	.input( 
-			@color: @vui-inputColor,
-			@backgroundColor: @vui-inputBackgroundColor,
-			@borderWidth: @vui-inputBorderWidth,
-			@borderColor: @vui-inputBorderColor,
-			@borderStyle: @vui-inputBorderStyle,
-			@borderRadius: @vui-inputBorderRadius,
-			@boxShadow: @vui-inputBoxShadow,
-			@minHeight: @vui-inputMinHeight,
-			@focusColor: @vui-inputFocusColor,
-			@disabledColor: @vui-inputDisabledColor,
-			@lineHeight: @vui-inputLineHeight,
-			@padding: @vui-inputPadding,
+	.input(
+			@color: @vui-input-color,
+			@backgroundColor: @vui-input-backgroundColor,
+			@borderWidth: @vui-input-borderWidth,
+			@borderColor: @vui-input-borderColor,
+			@borderStyle: @vui-input-borderStyle,
+			@borderRadius: @vui-input-borderRadius,
+			@boxShadow: @vui-input-boxShadow,
+			@minHeight: @vui-input-minHeight,
+			@focusColor: @vui-input-color-focus,
+			@disabledColor: @vui-input-color-disabled,
+			@lineHeight: @vui-input-lineHeight,
+			@padding: @vui-input-padding,
 			@width: 100%
 		) {
 
-		#vui.input-border( 
+		#vui.input-border(
 				@width: @borderWidth,
 				@color: @borderColor,
 				@style: @borderStyle,

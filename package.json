@@ -1,7 +1,7 @@
 {
   "name": "vui-input",
   "description": "LESS mixins and CSS for applying input styles",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "author": "D2L Corporation",
   "license": "Apache-2.0",
   "repository": {
@@ -12,8 +12,8 @@
     "test": "gulp && gulp test"
   },
   "dependencies": {
-    "vui-focus": "^0.2.0",
-    "vui-typography": "^0.0.2"
+    "vui-focus": "^0.3.0",
+    "vui-typography": "^0.2.0"
   },
   "devDependencies": {
     "del": "^0.1.3",
