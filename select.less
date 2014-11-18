@@ -1,4 +1,5 @@
 @import 'input';
+@import 'input-icons';
 @import 'node_modules/vui-typography/typography';
 
 @vui-select-optionGroup-color: @vui-heading-fontColor;
@@ -35,21 +36,21 @@
 
 		&:not([multiple]) {
 			background-position: -10000px -10000px;
-			background-image: data-uri('image/png;base64','select-background-off.png');
+			background-image: @vui-select-background-off;
 			background-repeat: no-repeat;
 
 			[dir='rtl'] & {
-				background-image: data-uri('image/png;base64','select-background-rtl-off.png');
+				background-image: @vui-select-background-off-rtl;
 			}
 
 		}
 
 		&:not([multiple]):focus,
 		&:not([multiple]):hover {
-			background-image: data-uri('image/png;base64','select-background-on.png');
+			background-image: @vui-select-background-on;
 
 			[dir='rtl'] & {
-				background-image: data-uri('image/png;base64','select-background-rtl-on.png');
+				background-image: @vui-select-background-on-rtl;
 			}
 		}
 
