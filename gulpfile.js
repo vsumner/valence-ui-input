@@ -1,12 +1,22 @@
 var gulp = require( 'gulp' ),
 	del = require( 'del' ),
-	vui = require( 'vui-helpers' );
+	vui = require( 'vui-helpers' ),
+	imagesToLess = require( 'images-to-less-variables' );
 
 gulp.task( 'clean', function( cb ) {
 	del([ 'input.css' ], cb);
 } );
 
-gulp.task( 'css', function () {
+gulp.task( 'iconsLess', function ( done ) {
+	imagesToLess( '*.png', {
+		dest: 'input-icons.less',
+		prefix: 'vui-'
+	} ).then( function() {
+		done();
+	} );
+} );
+
+gulp.task( 'css', [ 'iconsLess' ], function () {
 	return vui.makeCss( 'input.css.less', 'input.css', { lintOpts: '.csslintrc' } );
 } );
 
