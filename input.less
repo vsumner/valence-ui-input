@@ -15,17 +15,7 @@
 
 #vui {
 
-	.input-border(
-			@width: @vui-input-borderWidth,
-			@color: @vui-input-borderColor,
-			@style: @vui-input-borderStyle,
-			@radius: @vui-input-borderRadius
-		) {
-		border: @width @style @color;
-		border-radius: @radius;
-	}
-
-	.input(
+	.Input(
 			@color: @vui-input-color,
 			@backgroundColor: @vui-input-backgroundColor,
 			@borderWidth: @vui-input-borderWidth,
@@ -41,7 +31,7 @@
 			@width: 100%
 		) {
 
-		#vui.input-border(
+		#vui.Input.border(
 				@width: @borderWidth,
 				@color: @borderColor,
 				@style: @borderStyle,
@@ -73,6 +63,20 @@
 
 		&:disabled {
 			color: @disabledColor;
+		}
+
+	}
+
+	.Input {
+
+		.border(
+				@width: @vui-input-borderWidth,
+				@color: @vui-input-borderColor,
+				@style: @vui-input-borderStyle,
+				@radius: @vui-input-borderRadius
+			) {
+			border: @width @style @color;
+			border-radius: @radius;
 		}
 
 	}
