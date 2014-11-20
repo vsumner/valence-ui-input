@@ -2,19 +2,23 @@
 
 #vui {
 
-	.input-radio() {
+	.Input {
 
-		#vui.input(
-				@padding: 0,
-				@backgroundColor: transparent,
-				@borderStyle: none,
-				@boxShadow: none,
-				@minHeight: 0,
-				@width: auto
-			);
+		.radio() {
 
-		&:focus {
-			#vui.focus-outline();
+			#vui.Input(
+					@padding: 0,
+					@backgroundColor: transparent,
+					@borderStyle: none,
+					@boxShadow: none,
+					@minHeight: 0,
+					@width: auto
+				);
+
+			&:focus {
+				#vui.focusOutline();
+			}
+
 		}
 
 	}
