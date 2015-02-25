@@ -31,10 +31,10 @@
 				font-weight: normal;
 			}
 
-			// Customizing the style of the drow arrow is a hack in all browsers.
-		 	// This hack users a background image and hides the default dropdown arrow when possible.
+			// Customizing the style of the drop arrow is a hack in all browsers.
+		 	// This hack uses a background image and hides the default dropdown arrow when possible.
 		 	// The follwoing rules target specific browers where the customization hack works.
-		 	// In all other browsers, the default unstyle dropdown arrow is displayed
+		 	// In all other browsers, the default unstyled dropdown arrow is displayed
 
 			&:not([multiple]) {
 				background-position: -10000px -10000px;
@@ -99,8 +99,7 @@
 
 				&:not([multiple]) {
 					background-position: right center;
-					padding-right: 10px;
-					text-indent: 0.01px;
+					padding-right: 24px;
 					text-overflow: '' !important;
 					-moz-appearance: none;
 				}
@@ -108,7 +107,7 @@
 				[dir='rtl'] &:not([multiple]) {
 					background-position: left center;
 					padding-right: @vui-input-padding;
-					padding-left: 10px;
+					padding-left: 24px;
 				}
 
 			}
