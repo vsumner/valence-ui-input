@@ -1,6 +1,7 @@
 # vui-input
 [![NPM version][npm-image]][npm-url]
 [![Build status][ci-image]][ci-url]
+[![Dependency Status][dependencies-image]][dependencies-url]
 
 The **vui-input**  library contains Less mixins and CSS that can be used to style inputs.
 
@@ -9,5 +10,7 @@ See the [VUI Best Practices & Style Guide](https://github.com/Brightspace/valenc
 
 [npm-url]: https://npmjs.org/package/vui-input
 [npm-image]: https://img.shields.io/npm/v/vui-input.svg
-[ci-image]: https://travis-ci.org/Brightspace/valence-ui-input.svg?branch=master
 [ci-url]: https://travis-ci.org/Brightspace/valence-ui-input
+[ci-image]: https://img.shields.io/travis-ci/Brightspace/valence-ui-input.svg
+[dependencies-url]: https://david-dm.org/brightspace/valence-ui-input
+[dependencies-image]: https://img.shields.io/david/Brightspace/valence-ui-input.svg
