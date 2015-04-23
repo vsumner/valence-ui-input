@@ -141,6 +141,13 @@
 					expect( urlInput ).toHaveColor( 'rgb(102, 102, 102)' );
 				} );
 
+				it( 'has #f7f7f7 backgroundColor', function() {
+					expect( textInput ).toHaveBackgroundColor( 'rgb(247, 247, 247)' );
+					expect( emailInput ).toHaveBackgroundColor( 'rgb(247, 247, 247)' );
+					expect( passwordInput ).toHaveBackgroundColor( 'rgb(247, 247, 247)' );
+					expect( urlInput ).toHaveBackgroundColor( 'rgb(247, 247, 247)' );
+				} );
+
 			} );
 
 			describe( 'readonly', function() {

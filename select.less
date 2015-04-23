@@ -41,8 +41,15 @@
 				background-image: @vui-select-background-off;
 				background-repeat: no-repeat;
 
+				&:disabled {
+					background-image: @vui-select-background-disabled;
+				}
+
 				[dir='rtl'] & {
 					background-image: @vui-select-background-off-rtl;
+					&:disabled {
+						background-image: @vui-select-background-disabled-rtl;
+					}
 				}
 
 			}
@@ -51,8 +58,15 @@
 			&:not([multiple]):hover {
 				background-image: @vui-select-background-on;
 
+				&:disabled {
+					background-image: @vui-select-background-disabled;
+				}
+
 				[dir='rtl'] & {
 					background-image: @vui-select-background-on-rtl;
+					&:disabled {
+						background-image: @vui-select-background-disabled-rtl;
+					}
 				}
 			}
 

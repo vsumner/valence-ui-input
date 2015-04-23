@@ -1,6 +1,7 @@
 @import 'node_modules/vui-focus/focus';
 
 @vui-input-backgroundColor: #ffffff;
+@vui-input-backgroundColor-disabled: #f7f7f7;
 @vui-input-borderWidth: 1px;
 @vui-input-borderColor: #cccccc;
 @vui-input-borderStyle: solid;
@@ -62,6 +63,7 @@
 		}
 
 		&:disabled {
+			background-color: @vui-input-backgroundColor-disabled;
 			color: @disabledColor;
 		}
 
