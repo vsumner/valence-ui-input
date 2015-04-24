@@ -40,19 +40,27 @@
 				background-position: -10000px -10000px;
 				background-image: @vui-select-background-off;
 				background-repeat: no-repeat;
-
 				[dir='rtl'] & {
 					background-image: @vui-select-background-off-rtl;
 				}
-
 			}
 
 			&:not([multiple]):focus,
 			&:not([multiple]):hover {
 				background-image: @vui-select-background-on;
-
 				[dir='rtl'] & {
 					background-image: @vui-select-background-on-rtl;
+				}
+			}
+
+			&:not([multiple]) {
+				&:disabled,
+				&:focus:disabled,
+				&:hover:disabled {
+					background-image: @vui-select-background-disabled;
+					[dir='rtl'] & {
+						background-image: @vui-select-background-disabled-rtl;
+					}
 				}
 			}
 

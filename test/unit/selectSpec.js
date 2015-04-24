@@ -130,6 +130,10 @@
 					expect( select ).toHaveColor( 'rgb(102, 102, 102)' );
 				} );
 
+				it( 'has #f7f7f7 backgroundColor', function() {
+					expect( select ).toHaveBackgroundColor( 'rgb(247, 247, 247)' );
+				} );
+
 			} );
 
 			describe( 'readonly', function() {
