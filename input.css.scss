@@ -1,3 +1,4 @@
+@import 'input';
 @import 'input-checkbox';
 @import 'input-radio';
 @import 'select';
@@ -8,21 +9,21 @@
 .vui-input[type="password"],
 .vui-input[type="text"],
 .vui-input[type="url"] {
-	#vui.Input();
+	@include vui-input();
 }
 
 .vui-input[type="checkbox"] {
-	#vui.Input.checkbox();
+	@include vui-input-checkbox();
 }
 
 .vui-input[type="radio"] {
-	#vui.Input.radio();
+	@include vui-input-radio();
 }
 
 select.vui-input {
-	#vui.Input.select();
+	@include vui-input-select();
 }
 
 textarea.vui-input {
-	#vui.Input.textarea();
+	@include vui-input-textarea();
 }

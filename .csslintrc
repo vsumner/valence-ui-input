@@ -1,7 +1,1 @@
-{
-	"box-sizing": false,
-	"compatible-vendor-prefixes": false,
-	"known-properties": false,
-	"important": false,
-	"unqualified-attributes": false
-}
+--ignore=box-sizing,compatible-vendor-prefixes,known-properties,important,unqualified-attributes
