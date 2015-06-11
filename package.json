@@ -1,6 +1,6 @@
 {
   "name": "vui-input",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Mixins and CSS for applying input styles",
   "scripts": {
     "clean": "rimraf *.css",
@@ -15,7 +15,10 @@
     "build:sass:css": "node-sass --output-style expanded input.css.scss input.css && npm run build:sass:autoprefix",
     "postbuild:sass:css": "csslint input.css",
     "pretest": "npm run build",
-    "test": "karma start karma.conf.js"
+    "test": "npm run diff:assert && karma start karma.conf.js",
+    "prediff:assert": "npm run diff:create",
+    "diff:assert": "assertnodiff --file1 ./test/diff/less-scss-diff --file2 ./test/diff/less-scss-diff-new",
+    "diff:create": "createpatch --file1 input-less.css --file2 input.css -o ./test/diff/less-scss-diff-new"
   },
   "repository": {
     "type": "git",
@@ -39,6 +42,7 @@
   "devDependencies": {
     "autoprefixer": "^5.2.0",
     "csslint": "^0.10.0",
+    "diff-cli": "git://github.com/Brightspace/diff-cli.git#v0.0.1",
     "images-to-variables": "^0.2.1",
     "jasmine-dom-matchers": "^0.1.0",
     "karma": "^0.12.32",
