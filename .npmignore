@@ -7,6 +7,4 @@
 node_modules
 karma.conf.js
 test
-input.css.less
 input.css.scss
-input-less.css
