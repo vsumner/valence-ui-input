@@ -1,10 +1,11 @@
+bower_components
+node_modules
+test
 .editorconfig
 .gitattributes
 .gitignore
 .npmignore
 .travis.yml
 .csslintrc
-node_modules
 karma.conf.js
-test
 input.css.scss

@@ -1,12 +1,13 @@
 {
   "name": "vui-input",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Mixins and CSS for applying input styles",
   "scripts": {
     "clean": "rimraf *.css",
     "prebuild": "npm run clean && imgtoscss -p vui- -o input-icons.scss *.png",
     "build:autoprefix": "postcss --use autoprefixer input.css -o input.css",
     "build": "node-sass --output-style expanded input.css.scss input.css && npm run build:autoprefix",
+    "postinstall": "./node_modules/.bin/bower install",
     "pretest": "npm run build",
     "test": "csslint input.css && karma start karma.conf.js"
   },
@@ -26,8 +27,7 @@
   },
   "homepage": "https://github.com/Brightspace/valence-ui-input",
   "dependencies": {
-    "vui-focus": "^0.7.0",
-    "vui-typography": "^0.5.0"
+    "bower": "^1.5.2"
   },
   "devDependencies": {
     "autoprefixer": "^5.2.0",
