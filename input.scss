@@ -1,6 +1,6 @@
 
 @import 'input-border';
-@import 'node_modules/vui-focus/focus';
+@import 'bower_components/vui-focus/focus';
 
 $vui-input-backgroundColor: #ffffff !default;
 $vui-input-backgroundColor-disabled: #f7f7f7 !default;
@@ -64,4 +64,3 @@ $vui-input-minHeight: 28px !default;
 		}
 
 }
-
