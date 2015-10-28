@@ -195,8 +195,8 @@
 				expect( document ).toHaveCssSelector( 'select.vui-input optgroup' );
 			} );
 
-			it( 'has #666666 color', function() {
-				expect( group1 ).toHaveColor( 'rgb(102, 102, 102)' );
+			it( 'has ferrite color', function() {
+				expect( group1 ).toHaveColor( 'rgb(86, 90, 92)' );
 			} );
 
 			it( 'has bold font-weight', function() {
