@@ -1,9 +1,9 @@
 
 @import 'input';
 @import 'input-icons';
-@import 'bower_components/vui-typography/typography';
+@import 'bower_components/vui-colors/colors';
 
-$vui-select-optionGroup-color: $vui-heading-fontColor !default;
+$vui-select-optionGroup-color: $vui-color-ferrite !default;
 $vui-select-option-color: #000000 !default;
 
 @mixin vui-input-select() {

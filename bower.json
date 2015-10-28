@@ -2,8 +2,8 @@
   "name": "vui-input",
   "main": "input.scss",
   "dependencies": {
-    "vui-focus": "~0.7.1",
-    "vui-typography": "~0.6.0"
+    "vui-colors": "~0.0.4",
+    "vui-focus": "~0.7.1"
   },
   "license": "Apache-2.0",
   "ignore": [
