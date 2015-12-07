@@ -71,7 +71,7 @@
 				expect( select ).toHaveLeftPadding( '5px' );
 			} );
 
-			it( 'has 34px height', function() {
+			it( 'has 36px height', function() {
 				var expected = { default: { default: '36px', Windows: '34px' } };
 				expect( getComputedValue( select, 'height' ) ).toBeOnAgent( expected );
 			} );

@@ -82,7 +82,7 @@
 				expect( urlInput ).toHavePadding( '5px' );
 			} );
 
-			it( 'has 36px height', function() {
+			it( 'has 35px height', function() {
 				var expected = { default: { default: '38px', Windows: '36px' } };
 				expect( getComputedValue( textInput, 'height' ) ).toBeOnAgent( expected );
 				expect( getComputedValue( emailInput, 'height' ) ).toBeOnAgent( expected );
