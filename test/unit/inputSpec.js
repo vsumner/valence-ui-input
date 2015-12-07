@@ -83,7 +83,7 @@
 			} );
 
 			it( 'has 35px height', function() {
-				var expected = { default: { default: '35px', Windows: '36px' } };
+				var expected = { default: { default: '38px', Windows: '36px' } };
 				expect( getComputedValue( textInput, 'height' ) ).toBeOnAgent( expected );
 				expect( getComputedValue( emailInput, 'height' ) ).toBeOnAgent( expected );
 				expect( getComputedValue( passwordInput, 'height' ) ).toBeOnAgent( expected );
@@ -236,11 +236,11 @@
 			} );
 
 			it( 'has default width', function() {
-				expect( input ).toHaveWidth( '15px' );
+				expect( input ).toHaveWidth( '13px' );
 			} );
 
 			it( 'has default min height', function() {
-				expect( input ).toHaveMinHeight( '15px' );
+				expect( input ).toHaveMinHeight( '13px' );
 			} );
 
 			it( 'has no box shadow', function() {
@@ -275,11 +275,11 @@
 			} );
 
 			it( 'has default width', function() {
-				expect( input ).toHaveWidth( '15px' );
+				expect( input ).toHaveWidth( '13px' );
 			} );
 
 			it( 'has default min-height', function() {
-				expect( input ).toHaveMinHeight( '15px' );
+				expect( input ).toHaveMinHeight( '13px' );
 			} );
 
 			it( 'has no box shadow', function() {
