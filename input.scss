@@ -1,66 +1,42 @@
+@import 'bower_components/vui-colors/colors.scss';
+@import 'bower_components/vui-focus/focus.scss';
+@import 'bower_components/vui-typography/px-to-base-rem.scss';
 
-@import 'input-border';
-@import 'bower_components/vui-focus/focus';
+$vui-input-borderRadius: px-to-base-rem(8) !default;
+$vui-input-color: $vui-color-ferrite !default;
+$vui-input-padding: px-to-base-rem(8) !default;
 
-$vui-input-backgroundColor: #ffffff !default;
-$vui-input-backgroundColor-disabled: #f7f7f7 !default;
-$vui-input-boxShadow: 0 1px 1px 0 #f2f2f2 inset !default;
-$vui-input-color: initial !default;
-$vui-input-color-disabled: #666666 !default;
-$vui-input-color-focus: #94ccda !default;
-$vui-input-lineHeight: normal !default;
-$vui-input-padding: 5px !default;
-$vui-input-minHeight: 28px !default;
+@mixin vui-input() {
 
-@mixin vui-input(
-		$color: $vui-input-color,
-		$backgroundColor: $vui-input-backgroundColor,
-		$borderWidth: $vui-input-borderWidth,
-		$borderColor: $vui-input-borderColor,
-		$borderStyle: $vui-input-borderStyle,
-		$borderRadius: $vui-input-borderRadius,
-		$boxShadow: $vui-input-boxShadow,
-		$minHeight: $vui-input-minHeight,
-		$focusColor: $vui-input-color-focus,
-		$disabledColor: $vui-input-color-disabled,
-		$lineHeight: $vui-input-lineHeight,
-		$padding: $vui-input-padding,
-		$width: 100%
-	) {
-
-		@include vui-input-border(
-				$width: $borderWidth,
-				$color: $borderColor,
-				$style: $borderStyle,
-				$radius: $borderRadius
-			);
-
-		background-color: $backgroundColor;
-		box-shadow: $boxShadow;
+		background-color: $vui-color-white;
+		border: 1px solid $vui-color-titanius;
+		border-radius: $vui-input-borderRadius;
+		box-shadow: inset 0 3px 0 0 $vui-color-woolonardo;
 		box-sizing: border-box;
-		color: $color;
+		color: $vui-input-color;
 		display: inline-block;
 		font-family: inherit;
 		font-size: inherit;
-		font-weight: normal;
+		font-weight: 300;
 		height: auto;
-		line-height: $lineHeight;
+		line-height: normal;
 		margin: 0;
-		min-height: $minHeight;
-		padding: $padding;
-		transition: none;
+		padding: $vui-input-padding;
+		transition: border-color 0.5s ease;
 		vertical-align: middle;
-		width: $width;
+		width: 100%;
 
 		&:focus {
-			border-color: $focusColor;
-			box-shadow: $boxShadow, 0 0 5px 0 $focusColor;
+			border-color: $vui-color-celestine;
+			border-width: 2px;
 			outline-width: 0;
+			padding: px-to-base-rem(7);
 		}
 
 		&:disabled {
-			background-color: $vui-input-backgroundColor-disabled;
-			color: $disabledColor;
+			background-color: $vui-color-regolith;
+			border-color: $vui-color-titanius;
+			opacity: 0.5;
 		}
 
 }

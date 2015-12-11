@@ -1,7 +1,6 @@
-
-@import 'input';
+@import 'input.scss';
 
 @mixin vui-input-textarea() {
-	@include vui-input( $lineHeight: 1.25em );
+	@include vui-input();
 	overflow: auto;
 }
