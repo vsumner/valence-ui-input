@@ -7,8 +7,9 @@
     "prebuild": "npm run clean && imgtoscss -p vui- -o input-icons.scss *.png",
     "build:autoprefix": "postcss -c postcss.config.json",
     "build": "node-sass --output-style expanded input.css.scss input.css && npm run build:autoprefix",
+    "perceptual-diff": "percy snapshot test/",
     "postinstall": "./node_modules/.bin/bower install",
-    "pretest": "npm run build",
+    "pretest": "npm run build && cpy input.css ./test",
     "test": "csslint input.css"
   },
   "repository": {
@@ -31,6 +32,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.1.2",
+    "cpy": "^3.4.1",
     "csslint": "^0.10.0",
     "images-to-variables": "^0.3.0",
     "node-sass": "^3.4.2",
