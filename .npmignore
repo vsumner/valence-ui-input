@@ -1,11 +1,8 @@
 bower_components
 node_modules
-test
 .editorconfig
 .gitattributes
 .gitignore
 .npmignore
 .travis.yml
 .csslintrc
-karma.conf.js
-input.css.scss
