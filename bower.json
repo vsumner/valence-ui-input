@@ -3,7 +3,8 @@
   "main": "input.scss",
   "dependencies": {
     "vui-colors": "^0.1.0",
-    "vui-focus": "~0.7.1"
+    "vui-focus": "~0.7.1",
+    "vui-typography": "1.1.0"
   },
   "license": "Apache-2.0",
   "ignore": [

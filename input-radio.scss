@@ -1,16 +1,14 @@
-
-@import 'input';
-
 @mixin vui-input-radio() {
 
-	@include vui-input(
-			$padding: 0,
-			$backgroundColor: transparent,
-			$borderStyle: none,
-			$boxShadow: none,
-			$minHeight: 0,
-			$width: auto
-		);
+	border: none;
+	border-radius: 0;
+	background-color: transparent;
+	box-shadow: none;
+	box-sizing: border-box;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	width: auto;
 
 	&:focus {
 		@include vui-focus-outline();

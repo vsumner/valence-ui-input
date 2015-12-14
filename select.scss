@@ -1,7 +1,7 @@
-
-@import 'input';
-@import 'input-icons';
-@import 'bower_components/vui-colors/colors';
+@import 'input.scss';
+@import 'input-icons.scss';
+@import 'bower_components/vui-colors/colors.scss';
+@import 'bower_components/vui-typography/px-to-base-rem.scss';
 
 $vui-select-optionGroup-color: $vui-color-ferrite !default;
 $vui-select-option-color: #000000 !default;
@@ -13,8 +13,8 @@ $vui-select-option-color: #000000 !default;
 	// Select heights are always 2 pixels more than inputs and buttons in all font sizes and
 	// all browsers so subtracting 2 pixels to get same height across
 
-	padding-top: ($vui-input-padding - 1);
-	padding-bottom: ($vui-input-padding - 1);
+	padding-top: px-to-base-rem(7);
+	padding-bottom: px-to-base-rem(7);
 
 	optgroup {
 		color: $vui-select-optionGroup-color;
@@ -40,6 +40,11 @@ $vui-select-option-color: #000000 !default;
 		[dir='rtl'] & {
 			background-image: $vui-select-background-off-rtl;
 		}
+	}
+
+	&:not([multiple]):focus {
+		padding-top: px-to-base-rem(6);
+		padding-bottom: px-to-base-rem(6);
 	}
 
 	&:not([multiple]):focus,
