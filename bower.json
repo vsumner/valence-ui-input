@@ -4,7 +4,7 @@
   "dependencies": {
     "vui-colors": "^0.1.0",
     "vui-focus": "~0.7.1",
-    "vui-typography": "1.1.0"
+    "vui-typography": "1.1.1"
   },
   "license": "Apache-2.0",
   "ignore": [
