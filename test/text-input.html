@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Text Input Sample</title>
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="input.css" />
+		<style>
+		html {
+			font-size: 20px;
+		}
+		body {
+			font-family: 'Lato', sans-serif;
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+		.container {
+			width: 500px;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<label>
+				Type=Text
+				<input type="text" class="vui-input" value="text input value" />
+			</label>
+			<label>
+				Focused
+				<input type="text" class="vui-input" autofocus value="autofocus value" />
+			</label>
+			<label>
+				Disabled
+				<input type="text" class="vui-input" disabled value="disabled value" />
+			</label>
+			<label>
+				Type=Email
+				<input type="email" class="vui-input" value="foo@bar.com" />
+			</label>
+			<label>
+				Type=Password
+				<input type="password" class="vui-input" value="password value" />
+			</label>
+			<label>
+				Type=Url
+				<input type="url" class="vui-input" value="http://www.d2l.com" />
+			</label>
+		</div>
+	</body>
+</html>
