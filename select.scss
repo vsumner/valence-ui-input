@@ -13,8 +13,8 @@ $vui-select-option-color: #000000 !default;
 	// Select heights are always 2 pixels more than inputs and buttons in all font sizes and
 	// all browsers so subtracting 2 pixels to get same height across
 
-	padding-top: px-to-base-rem(7);
-	padding-bottom: px-to-base-rem(7);
+	padding-top: calc(0.4rem - 1px);
+	padding-bottom: calc(0.4rem - 1px);
 
 	optgroup {
 		color: $vui-select-optionGroup-color;
@@ -43,8 +43,8 @@ $vui-select-option-color: #000000 !default;
 	}
 
 	&:not([multiple]):focus {
-		padding-top: px-to-base-rem(6);
-		padding-bottom: px-to-base-rem(6);
+		padding-top: calc(0.4rem - 2px);
+		padding-bottom: calc(0.4rem - 2px);
 	}
 
 	&:not([multiple]):focus,
