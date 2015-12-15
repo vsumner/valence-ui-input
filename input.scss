@@ -30,7 +30,7 @@ $vui-input-padding: px-to-base-rem(8) !default;
 			border-color: $vui-color-celestine;
 			border-width: 2px;
 			outline-width: 0;
-			padding: px-to-base-rem(7);
+			padding: calc(0.4rem - 1px);
 		}
 
 		&:disabled {
