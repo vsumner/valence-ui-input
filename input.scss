@@ -2,18 +2,14 @@
 @import 'bower_components/vui-focus/focus.scss';
 @import 'bower_components/vui-typography/px-to-base-rem.scss';
 
-$vui-input-borderRadius: px-to-base-rem(8) !default;
-$vui-input-color: $vui-color-ferrite !default;
-$vui-input-padding: px-to-base-rem(8) !default;
-
 @mixin vui-input() {
 
 		background-color: $vui-color-white;
 		border: 1px solid $vui-color-titanius;
-		border-radius: $vui-input-borderRadius;
+		border-radius: px-to-base-rem(8);
 		box-shadow: inset 0 3px 0 0 $vui-color-woolonardo;
 		box-sizing: border-box;
-		color: $vui-input-color;
+		color: $vui-color-ferrite;
 		display: inline-block;
 		font-family: inherit;
 		font-size: inherit;
@@ -21,10 +17,14 @@ $vui-input-padding: px-to-base-rem(8) !default;
 		height: auto;
 		line-height: normal;
 		margin: 0;
-		padding: $vui-input-padding;
+		padding: px-to-base-rem(8);
 		transition: border-color 0.5s ease;
 		vertical-align: middle;
 		width: 100%;
+
+		&:hover {
+			border-color: $vui-color-pressicus;
+		}
 
 		&:focus {
 			border-color: $vui-color-celestine;
@@ -33,9 +33,8 @@ $vui-input-padding: px-to-base-rem(8) !default;
 			padding: calc(0.4rem - 1px);
 		}
 
-		&:disabled {
-			background-color: $vui-color-regolith;
-			border-color: $vui-color-titanius;
+		&:disabled,
+		&:hover:disabled {
 			opacity: 0.5;
 		}
 

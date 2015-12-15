@@ -3,123 +3,64 @@
 @import 'bower_components/vui-colors/colors.scss';
 @import 'bower_components/vui-typography/px-to-base-rem.scss';
 
-$vui-select-optionGroup-color: $vui-color-ferrite !default;
-$vui-select-option-color: #000000 !default;
-
 @mixin vui-input-select() {
 
 	@include vui-input();
 
-	// Select heights are always 2 pixels more than inputs and buttons in all font sizes and
-	// all browsers so subtracting 2 pixels to get same height across
-
-	padding-top: calc(0.4rem - 1px);
-	padding-bottom: calc(0.4rem - 1px);
-
-	optgroup {
-		color: $vui-select-optionGroup-color;
-		font-style: normal;
-		font-weight: bold;
-	}
-
 	option {
-		color: $vui-select-option-color;
-		font-style: normal;
-		font-weight: normal;
+		font-weight: 300;
 	}
 
-	// Customizing the style of the drop arrow is a hack in all browsers.
- 	// This hack uses a background image and hides the default dropdown arrow when possible.
- 	// The follwoing rules target specific browers where the customization hack works.
- 	// In all other browsers, the default unstyled dropdown arrow is displayed
-
-	&:not([multiple]) {
-		background-position: -10000px -10000px;
-		background-image: $vui-select-background-off;
-		background-repeat: no-repeat;
-		[dir='rtl'] & {
-			background-image: $vui-select-background-off-rtl;
-		}
-	}
-
-	&:not([multiple]):focus {
-		padding-top: calc(0.4rem - 2px);
-		padding-bottom: calc(0.4rem - 2px);
-	}
-
-	&:not([multiple]):focus,
-	&:not([multiple]):hover {
-		background-image: $vui-select-background-on;
-		[dir='rtl'] & {
-			background-image: $vui-select-background-on-rtl;
-		}
-	}
-
-	&:not([multiple]) {
-		&:disabled,
-		&:focus:disabled,
-		&:hover:disabled {
-			background-image: $vui-select-background-disabled;
-			[dir='rtl'] & {
-				background-image: $vui-select-background-disabled-rtl;
-			}
-		}
-	}
-
-	// IE10+ //
-	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-
-		&:not([multiple])::-ms-expand {
-			display: none;
-		}
-
+	@media screen and (-webkit-min-device-pixel-ratio :0),
+		screen and (min--moz-device-pixel-ratio: 0),
+		screen and (-ms-high-contrast: active),
+		(-ms-high-contrast: none) {
 		&:not([multiple]) {
 			background-position: right center;
-			padding-right: 30px;
-		}
-
-		[dir='rtl'] &:not([multiple]) {
-			background-position: left center;
-			padding-right: $vui-input-padding;
-			padding-left: 30px;
-		}
-
-	}
-
-	// Chrome/Safari //
-	@media screen and (-webkit-min-device-pixel-ratio :0) {
-
-		&:not([multiple]) {
-			background-position: right center;
-			padding-right: 30px;
+			background-repeat: no-repeat;
+			background-size: contain;
+			padding-right: calc(0.4rem + 42px);
 			-webkit-appearance: none;
 			-moz-appearance: none;
+			&:focus {
+				&::-ms-value {
+					background-color: transparent;
+					color: $vui-color-ferrite;
+				}
+			}
+			&:focus,
+			&:hover {
+				background-image: $vui-select-hover;
+			}
+			&,
+			&:disabled,
+			&:focus:disabled,
+			&:hover:disabled {
+				background-image: $vui-select-normal;
+			}
 		}
-
 		[dir='rtl'] &:not([multiple]) {
 			background-position: left center;
-			padding-right: $vui-input-padding;
-			padding-left: 30px;
+			padding-right: px-to-base-rem(8);
+			padding-left: calc(0.4rem + 42px);
+			&:focus {
+				padding-left: calc(0.4rem + 42px - 1px);
+				padding-right: calc(0.4rem - 1px);
+			}
+			&:focus,
+			&:hover {
+				background-image: $vui-select-hover-rtl;
+			}
+			&,
+			&:disabled,
+			&:focus:disabled,
+			&:hover:disabled {
+				background-image: $vui-select-normal-rtl;
+			}
 		}
-
-	}
-
-	// Recent Firefox //
-	@media screen and (min--moz-device-pixel-ratio: 0) {
-
-		&:not([multiple]) {
-			background-position: right center;
-			padding-right: 24px;
-			text-overflow: '' !important;
-			-moz-appearance: none;
+		&::-ms-expand {
+			display: none;
 		}
-
-		[dir='rtl'] &:not([multiple]) {
-			background-position: left center;
-			padding-right: $vui-input-padding;
-			padding-left: 24px;
-		}
-
 	}
 
 }

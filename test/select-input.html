@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Select Input Sample</title>
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="input.css" />
+		<style>
+		html {
+			font-size: 20px;
+		}
+		body {
+			font-family: 'Lato', sans-serif;
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+		.container {
+			float: left;
+			margin-right: 10px;
+			width: 500px;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<label>
+				Select
+				<select class="vui-input">
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+				</select>
+			</label>
+			<label>
+				Disabled
+				<select class="vui-input" disabled>
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+				</select>
+			</label>
+			<label>
+				Multiple
+				<select class="vui-input" multiple size="3">
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+					<option>Option 4</option>
+					<option>Option 5</option>
+				</select>
+			</label>
+			<label>
+				Groups
+				<select class="vui-input">
+					<optgroup label="Group 1">
+						<option>Option 1-1</option>
+					</optgroup>
+					<optgroup label="Group 2">
+						<option>Option 2-1</option>
+						<option>Option 2-2</option>
+					</optgroup>
+					<option>Option 3</option>
+					<option>Option 4</option>
+				</select>
+			</label>
+			<label>
+				Focused
+				<select class="vui-input" autofocus>
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+				</select>
+			</label>
+		</div>
+		<div class="container" dir="rtl">
+			<label>
+				Select
+				<select class="vui-input">
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+				</select>
+			</label>
+			<label>
+				Disabled
+				<select class="vui-input" disabled>
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+				</select>
+			</label>
+			<label>
+				Multiple
+				<select class="vui-input" multiple size="3">
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+					<option>Option 4</option>
+					<option>Option 5</option>
+				</select>
+			</label>
+			<label>
+				Groups
+				<select class="vui-input">
+					<optgroup label="Group 1">
+						<option>Option 1-1</option>
+					</optgroup>
+					<optgroup label="Group 2">
+						<option>Option 2-1</option>
+						<option>Option 2-2</option>
+					</optgroup>
+					<option>Option 3</option>
+					<option>Option 4</option>
+				</select>
+			</label>
+		</div>
+	</body>
+</html>
