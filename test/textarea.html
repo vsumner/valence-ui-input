@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Textarea Sample</title>
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="input.css" />
+		<style>
+		html {
+			font-size: 20px;
+		}
+		body {
+			font-family: 'Lato', sans-serif;
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+		.container {
+			float: left;
+			margin-right: 10px;
+			width: 500px;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<label>
+				Type=Text
+				<textarea class="vui-input">textarea value</textarea>
+			</label>
+			<label>
+				Disabled
+				<textarea class="vui-input" disabled>disabled value</textarea>
+			</label>
+			<label>
+				Focused
+				<textarea class="vui-input" autofocus>autofocus value</textarea>
+			</label>
+		</div>
+		<div class="container" dir="rtl">
+			<label>
+				Type=Text
+				<textarea class="vui-input">textarea value</textarea>
+			</label>
+			<label>
+				Disabled
+				<textarea class="vui-input" disabled>disabled value</textarea>
+			</label>
+		</div>
+	</body>
+</html>
