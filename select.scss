@@ -19,7 +19,7 @@
 			background-position: right center;
 			background-repeat: no-repeat;
 			background-size: contain;
-			padding-right: calc(0.4rem + 42px);
+			padding-right: calc(1rem + 42px);
 			-webkit-appearance: none;
 			-moz-appearance: none;
 			&:focus {
@@ -41,11 +41,11 @@
 		}
 		[dir='rtl'] &:not([multiple]) {
 			background-position: left center;
-			padding-right: px-to-base-rem(8);
-			padding-left: calc(0.4rem + 42px);
+			padding-right: px-to-base-rem(20);
+			padding-left: calc(1rem + 42px);
 			&:focus {
-				padding-left: calc(0.4rem + 42px - 1px);
-				padding-right: calc(0.4rem - 1px);
+				padding-left: calc(1rem + 42px - 1px);
+				padding-right: calc(1rem - 1px);
 			}
 			&:focus,
 			&:hover {
