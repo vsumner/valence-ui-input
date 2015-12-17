@@ -1,1 +1,1 @@
---ignore=box-sizing,compatible-vendor-prefixes,known-properties,important,unqualified-attributes
+--ignore=box-sizing,compatible-vendor-prefixes,known-properties,important,unqualified-attributes,duplicate-background-images
