@@ -21,7 +21,8 @@
 		</style>
 	</head>
 	<body>
-		<div class="container">
+		<div class="container on">
+			<h2>Mixins</h2>
 			<span>Checkbox (Unchecked)</span>
 			<p>
 				<input type="checkbox" id="cb-unchecked" />
@@ -39,8 +40,49 @@
 			</p>
 			<span>Checkbox (Focused)</span>
 			<p>
+				<input type="checkbox" id="cb-focus" />
+				<label for="cb-focus">checkbox</label>
+			</p>
+		</div>
+		<div class="container">
+			<h2>Class Names</h2>
+			<span>Checkbox (Unchecked)</span>
+			<p>
+				<input type="checkbox" class="vui-input" id="cb-unchecked" />
+				<label for="cb-unchecked">checkbox</label>
+			</p>
+			<span>Checkbox (Checked)</span>
+			<p>
+				<input type="checkbox" class="vui-input" id="cb-checked" checked />
+				<label for="cb-checked">checkbox</label>
+			</p>
+			<span>Checkbox (Disabled)</span>
+			<p>
+				<input type="checkbox" class="vui-input" id="cb-disabled" disabled />
+				<label for="cb-disabled">checkbox</label>
+			</p>
+			<span>Checkbox (Focused)</span>
+			<p>
 				<input type="checkbox" id="cb-focus" autofocus />
 				<label for="cb-focus">checkbox</label>
+			</p>
+		</div>
+		<div class="container off">
+			<h2>Style Not Applied (old IE)</h2>
+			<span>Checkbox (Unstyled, Unchecked)</span>
+			<p>
+				<input type="checkbox" id="cb-unstyled-unchecked" />
+				<label for="cb-unstyled-unchecked">checkbox</label>
+			</p>
+			<span>Checkbox (Checked)</span>
+			<p>
+				<input type="checkbox" id="cb-unstyled-checked" checked />
+				<label for="cb-unstyled-checked">checkbox</label>
+			</p>
+			<span>Checkbox (Disabled)</span>
+			<p>
+				<input type="checkbox" id="cb-unstyled-disabled" disabled />
+				<label for="cb-unstyled-disabled">checkbox</label>
 			</p>
 		</div>
 	</body>

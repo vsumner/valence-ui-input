@@ -2,22 +2,28 @@
 @import '../input-checkbox.scss';
 @import '../select.scss';
 @import '../textarea.scss';
+@import '../input.css.scss';
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"] {
-	@include vui-input();
+.on {
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"] {
+		@include vui-input();
+	}
+	input[type="checkbox"] {
+		@include vui-input-checkbox();
+	}
+	select {
+		@include vui-input-select();
+	}
+
+	textarea {
+		@include vui-input-textarea();
+	}
 }
-
-input[type="checkbox"] {
-	@include vui-input-checkbox();
-}
-
-select {
-	@include vui-input-select();
-}
-
-textarea {
-	@include vui-input-textarea();
+.off {
+	input[type="checkbox"] {
+		@include _vui-input-checkbox-not-supported();
+	}
 }

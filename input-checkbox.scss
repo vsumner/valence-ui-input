@@ -1,17 +1,17 @@
 @mixin vui-input-checkbox() {
 
-	border: none;
-	border-radius: 0;
-	background-color: transparent;
-	box-shadow: none;
-	box-sizing: border-box;
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	width: auto;
+	@include _vui-input-checkbox-not-supported();
 
-	&:focus {
-		@include vui-focus-outline();
+	@media screen and (-webkit-min-device-pixel-ratio :0),
+		screen and (min--moz-device-pixel-ratio: 0),
+		screen and (-ms-high-contrast: active),
+		(-ms-high-contrast: none) {
 	}
 
+}
+
+@mixin _vui-input-checkbox-not-supported() {
+	@include vui-input();
+	box-shadow: none;
+	width: auto;
 }
