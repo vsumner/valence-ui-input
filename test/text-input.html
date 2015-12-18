@@ -16,14 +16,13 @@
 			margin-bottom: 10px;
 		}
 		.container {
-			float: left;
-			margin-right: 10px;
 			width: 500px;
 		}
 		</style>
 	</head>
 	<body>
-		<div class="container">
+		<div class="container on">
+			<h2>Mixins</h2>
 			<label>
 				Type=Text
 				<input type="text" value="text input value" />
@@ -46,10 +45,38 @@
 			</label>
 			<label>
 				Focused
-				<input type="text" autofocus value="autofocus value" />
+				<input type="text" value="autofocus value" />
 			</label>
 		</div>
-		<div class="container" dir="rtl">
+		<div class="container">
+			<h2>Class Names</h2>
+			<label>
+				Type=Text
+				<input type="text" class="vui-input" value="text input value" />
+			</label>
+			<label>
+				Disabled
+				<input type="text" class="vui-input" disabled value="disabled value" />
+			</label>
+			<label>
+				Type=Email
+				<input type="email" class="vui-input" value="foo@bar.com" />
+			</label>
+			<label>
+				Type=Password
+				<input type="password" class="vui-input" value="password value" />
+			</label>
+			<label>
+				Type=Url
+				<input type="url" class="vui-input" value="http://www.d2l.com" />
+			</label>
+			<label>
+				Focused
+				<input type="text" class="vui-input" autofocus value="autofocus value" />
+			</label>
+		</div>
+		<div class="container on" dir="rtl">
+			<h2>RTL</h2>
 			<label>
 				Type=Text
 				<input type="text" value="text input value" />
