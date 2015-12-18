@@ -1,0 +1,23 @@
+@import '../input.scss';
+@import '../input-checkbox.scss';
+@import '../select.scss';
+@import '../textarea.scss';
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"] {
+	@include vui-input();
+}
+
+input[type="checkbox"] {
+	@include vui-input-checkbox();
+}
+
+select {
+	@include vui-input-select();
+}
+
+textarea {
+	@include vui-input-textarea();
+}
