@@ -16,13 +16,12 @@
 		screen and (-ms-high-contrast: active),
 		(-ms-high-contrast: none) {
 		&:not([multiple]) {
+			appearance: none;
 			background-position: right center;
 			background-repeat: no-repeat;
 			background-size: contain;
 			max-height: calc(2rem + 2px);
 			padding-right: calc(1rem + 42px);
-			-webkit-appearance: none;
-			-moz-appearance: none;
 			&:focus {
 				&::-ms-value {
 					background-color: transparent;
