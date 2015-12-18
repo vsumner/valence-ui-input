@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Checkbox Sample</title>
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="input.css" />
+		<style>
+		html {
+			font-size: 20px;
+		}
+		body {
+			font-family: 'Lato', sans-serif;
+		}
+		span {
+			display: block;
+			margin-bottom: 10px;
+		}
+		.container {
+			width: 500px;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<span>Checkbox (Unchecked)</span>
+			<p>
+				<input type="checkbox" id="cb-unchecked" />
+				<label for="cb-unchecked">checkbox</label>
+			</p>
+			<span>Checkbox (Checked)</span>
+			<p>
+				<input type="checkbox" id="cb-checked" checked />
+				<label for="cb-checked">checkbox</label>
+			</p>
+			<span>Checkbox (Disabled)</span>
+			<p>
+				<input type="checkbox" id="cb-disabled" disabled />
+				<label for="cb-disabled">checkbox</label>
+			</p>
+			<span>Checkbox (Focused)</span>
+			<p>
+				<input type="checkbox" id="cb-focus" autofocus />
+				<label for="cb-focus">checkbox</label>
+			</p>
+		</div>
+	</body>
+</html>
