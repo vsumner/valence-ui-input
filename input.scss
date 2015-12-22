@@ -28,6 +28,7 @@
 		&:focus {
 			border-color: $vui-color-celestine;
 			border-width: 2px;
+			box-shadow: none;
 			outline-width: 0;
 			padding: calc(0.4rem - 1px) calc(1rem - 1px);
 		}
