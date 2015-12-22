@@ -11,7 +11,5 @@
 }
 
 @mixin _vui-input-checkbox-not-supported() {
-	@include vui-input();
-	box-shadow: none;
-	width: auto;
+	@include vui-input($box-shadow: none, $width: auto);
 }
