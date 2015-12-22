@@ -1,0 +1,52 @@
+@import 'bower_components/vui-colors/colors.scss';
+@import 'bower_components/vui-focus/focus.scss';
+
+@mixin _vui-input-legacy-outline() {
+	outline: 2px solid $vui-color-celestine-light-2;
+}
+
+@mixin _vui-input-checkbox-radio-helper(
+		$appearance,
+		$background-image-checked,
+		$border-radius
+	) {
+
+	@include vui-input(
+		$background-color: $vui-color-woolonardo,
+		$background-color-hover: $vui-color-gypsum,
+		$border-radius: $border-radius,
+		$box-shadow: none,
+		$has-text: false,
+		$height: 1.1rem,
+		$padding: 0,
+		$padding-focus: 0,
+		$width: 1.1rem
+	);
+
+	appearance: none;
+	background-position: center center;
+	background-repeat: no-repeat;
+
+	&:checked {
+		background-image: $background-image-checked;
+	}
+
+	/* Firefox only */
+	/* https://bugzilla.mozilla.org/show_bug.cgi?id=605985 */
+	@-moz-document url-prefix() {
+		& {
+			appearance: $appearance;
+			height: auto;
+			width: auto;
+		}
+		&:focus {
+			@include _vui-input-legacy-outline();
+		}
+	}
+	/* IE (not Edge) only */
+	@media screen and (min-width:0\0) {
+		&:focus {
+			@include _vui-input-legacy-outline();
+		}
+	}
+}

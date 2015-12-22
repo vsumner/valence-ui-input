@@ -1,17 +1,10 @@
+@import 'checkbox-radio.scss';
+@import 'input-icons.scss';
+
 @mixin vui-input-radio() {
-
-	border: none;
-	border-radius: 0;
-	background-color: transparent;
-	box-shadow: none;
-	box-sizing: border-box;
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	width: auto;
-
-	&:focus {
-		@include vui-focus-outline();
-	}
-
+	@include _vui-input-checkbox-radio-helper(
+		radio,
+		$vui-radio,
+		0.55rem
+	);
 }
