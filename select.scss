@@ -29,7 +29,9 @@
 				}
 			}
 			&:focus,
-			&:hover {
+			&:hover,
+			&.vui-input-hover,
+			&.vui-input-focus {
 				background-image: $vui-select-hover;
 			}
 			&,
@@ -48,7 +50,9 @@
 				padding-right: calc(1rem - 1px);
 			}
 			&:focus,
-			&:hover {
+			&:hover,
+			&.vui-input-hover,
+			&.vui-input-focus {
 				background-image: $vui-select-hover-rtl;
 			}
 			&,
