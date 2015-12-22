@@ -10,6 +10,7 @@
 
 	@include vui-input(
 		$box-shadow: none,
+		$height: 22px,
 		$padding: 0,
 		$padding-focus: 0,
 		$width: 22px
@@ -18,7 +19,6 @@
 	appearance: none;
 	background-position: center center;
 	background-repeat: no-repeat;
-	height: 22px;
 	transition-property: border-color, background-color;
 
 	&,

@@ -2,89 +2,64 @@
 <html>
 	<head>
 		<title>Text Input Sample</title>
-		<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="test.css" />
-		<style>
-		html {
-			font-size: 20px;
-		}
-		body {
-			font-family: 'Lato', sans-serif;
-		}
-		label {
-			display: block;
-			margin-bottom: 10px;
-		}
-		.container {
-			width: 500px;
-		}
-		</style>
 	</head>
 	<body>
-		<div class="container on">
-			<h2>Mixins</h2>
-			<label>
-				Type=Text
-				<input type="text" value="text input value" />
-			</label>
-			<label>
-				Disabled
-				<input type="text" disabled value="disabled value" />
-			</label>
-			<label>
-				Type=Email
-				<input type="email" value="foo@bar.com" />
-			</label>
-			<label>
-				Type=Password
-				<input type="password" value="password value" />
-			</label>
-			<label>
-				Type=Url
-				<input type="url" value="http://www.d2l.com" />
-			</label>
-			<label>
-				Focused
-				<input type="text" value="autofocus value" />
-			</label>
-		</div>
-		<div class="container">
-			<h2>Class Names</h2>
-			<label>
-				Type=Text
-				<input type="text" class="vui-input" value="text input value" />
-			</label>
-			<label>
-				Disabled
-				<input type="text" class="vui-input" disabled value="disabled value" />
-			</label>
-			<label>
-				Type=Email
-				<input type="email" class="vui-input" value="foo@bar.com" />
-			</label>
-			<label>
-				Type=Password
-				<input type="password" class="vui-input" value="password value" />
-			</label>
-			<label>
-				Type=Url
-				<input type="url" class="vui-input" value="http://www.d2l.com" />
-			</label>
-			<label>
-				Focused
-				<input type="text" class="vui-input" autofocus value="autofocus value" />
-			</label>
-		</div>
-		<div class="container on" dir="rtl">
-			<h2>RTL</h2>
-			<label>
-				Type=Text
-				<input type="text" value="text input value" />
-			</label>
-			<label>
-				Disabled
-				<input type="text" disabled value="disabled value" />
-			</label>
-		</div>
+		<h2>Mixins</h2>
+		<table class="on">
+			<thead>
+				<tr>
+					<th></th>
+					<th>Enabled</th>
+					<th>Disabled</th>
+					<th>Hover</th>
+					<th>Focus</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Normal</th>
+					<td><input type="text" value="text input value" /></td>
+					<td><input type="text" disabled value="disabled value" /></td>
+					<td><input type="text" class="vui-input-hover" value="hover value" /></td>
+					<td><input type="text" class="vui-input-focus" value="focus value" /></td>
+				</tr>
+				<tr>
+					<th>Placeholder</th>
+					<td><input type="text" placeholder="value" /></td>
+					<td><input type="text" disabled placeholder="value" /></td>
+					<td><input type="text" class="vui-input-hover" placeholder="value" /></td>
+					<td><input type="text" class="vui-input-focus" placeholder="value" /></td>
+				</tr>
+			</tbody>
+		</table>
+		<h2>Class Names</h2>
+		<table>
+			<thead>
+				<tr>
+					<th></th>
+					<th>Enabled</th>
+					<th>Disabled</th>
+					<th>Hover</th>
+					<th>Focus</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Normal</th>
+					<td><input type="text" class="vui-input" value="text input value" /></td>
+					<td><input type="text" class="vui-input" disabled value="disabled value" /></td>
+					<td><input type="text" class="vui-input vui-input-hover" value="hover value" /></td>
+					<td><input type="text" class="vui-input vui-input-focus" value="focus value" /></td>
+				</tr>
+				<tr>
+					<th>Placeholder</th>
+					<td><input type="text" class="vui-input" placeholder="value" /></td>
+					<td><input type="text" class="vui-input" disabled placeholder="value" /></td>
+					<td><input type="text" class="vui-input vui-input-hover" placeholder="value" /></td>
+					<td><input type="text" class="vui-input vui-input-focus" placeholder="value" /></td>
+				</tr>
+			</tbody>
+		</table>
 	</body>
 </html>

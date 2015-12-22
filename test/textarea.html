@@ -2,65 +2,64 @@
 <html>
 	<head>
 		<title>Textarea Sample</title>
-		<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="test.css" />
-		<style>
-		html {
-			font-size: 20px;
-		}
-		body {
-			font-family: 'Lato', sans-serif;
-		}
-		label {
-			display: block;
-			margin-bottom: 10px;
-		}
-		.container {
-			width: 500px;
-		}
-		</style>
 	</head>
 	<body>
-		<div class="container on">
-			<h2>Mixins</h2>
-			<label>
-				Type=Text
-				<textarea>textarea value</textarea>
-			</label>
-			<label>
-				Disabled
-				<textarea disabled>disabled value</textarea>
-			</label>
-			<label>
-				Focused
-				<textarea>autofocus value</textarea>
-			</label>
-		</div>
-		<div class="container">
-			<h2>Class Names</h2>
-			<label>
-				Type=Text
-				<textarea class="vui-input">textarea value</textarea>
-			</label>
-			<label>
-				Disabled
-				<textarea class="vui-input" disabled>disabled value</textarea>
-			</label>
-			<label>
-				Focused
-				<textarea class="vui-input" autofocus>autofocus value</textarea>
-			</label>
-		</div>
-		<div class="container on" dir="rtl">
-			<h2>RTL</h2>
-			<label>
-				Type=Text
-				<textarea>textarea value</textarea>
-			</label>
-			<label>
-				Disabled
-				<textarea disabled>disabled value</textarea>
-			</label>
-		</div>
+		<h2>Mixins</h2>
+		<table class="on">
+			<thead>
+				<tr>
+					<th></th>
+					<th>Enabled</th>
+					<th>Disabled</th>
+					<th>Hover</th>
+					<th>Focus</th>
+				</tr>
+			</tbody>
+			<tbody>
+				<tr>
+					<th>Normal</th>
+					<td><textarea>textarea value</textarea></td>
+					<td><textarea disabled>disabled value</textarea></td>
+					<td><textarea class="vui-input-hover">hover value</textarea></td>
+					<td><textarea class="vui-input-focus">focus value</textarea></td>
+				</tr>
+				<tr>
+					<th>Placeholder</th>
+					<td><textarea placeholder="value"></textarea></td>
+					<td><textarea placeholder="value" disabled></textarea></td>
+					<td><textarea placeholder="value" class="vui-input-hover"></textarea></td>
+					<td><textarea placeholder="value" class="vui-input-focus"></textarea></td>
+				</tr>
+			</tbody>
+		</table>
+		<h2>Class Names</h2>
+		<table>
+			<thead>
+				<tr>
+					<th></th>
+					<th>Enabled</th>
+					<th>Disabled</th>
+					<th>Hover</th>
+					<th>Focus</th>
+				</tr>
+			</tbody>
+			<tbody>
+				<tr>
+					<th>Normal</th>
+					<td><textarea class="vui-input">textarea value</textarea></td>
+					<td><textarea class="vui-input" disabled>disabled value</textarea></td>
+					<td><textarea class="vui-input vui-input-hover">hover value</textarea></td>
+					<td><textarea class="vui-input vui-input-focus">focus value</textarea></td>
+				</tr>
+				<tr>
+					<th>Placeholder</th>
+					<td><textarea placeholder="value" class="vui-input"></textarea></td>
+					<td><textarea placeholder="value" class="vui-input" disabled></textarea></td>
+					<td><textarea placeholder="value" class="vui-input vui-input-hover"></textarea></td>
+					<td><textarea placeholder="value" class="vui-input vui-input-focus"></textarea></td>
+				</tr>
+			</tbody>
+		</table>
 	</body>
 </html>
