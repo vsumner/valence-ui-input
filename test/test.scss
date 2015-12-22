@@ -4,6 +4,22 @@
 @import '../textarea.scss';
 @import '../input.css.scss';
 
+@import 'https://fonts.googleapis.com/css?family=Lato:400,300';
+
+html {
+	font-size: 20px;
+}
+body {
+	font-family: 'Lato', sans-serif;
+	margin: 1rem;
+}
+table {
+	max-width: 1000px;
+}
+td, th {
+	padding: 0.5rem;
+}
+
 .on {
 	input[type="text"],
 	input[type="email"],
@@ -17,13 +33,7 @@
 	select {
 		@include vui-input-select();
 	}
-
 	textarea {
 		@include vui-input-textarea();
-	}
-}
-.off {
-	input[type="checkbox"] {
-		@include _vui-input-checkbox-not-supported();
 	}
 }
