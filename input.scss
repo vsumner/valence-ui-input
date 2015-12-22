@@ -13,8 +13,6 @@
 	background-color: $vui-color-white;
 	border-radius: px-to-base-rem(6);
 	border-style: solid;
-	border-width: 1px;
-	box-shadow: $box-shadow;
 	box-sizing: border-box;
 	color: $vui-color-ferrite;
 	display: inline-block;
@@ -24,7 +22,6 @@
 	height: $height;
 	line-height: $line-height;
 	margin: 0;
-	padding: $padding;
 	transition: border-color 0.5s ease;
 	vertical-align: middle;
 	width: $width;
@@ -32,11 +29,12 @@
 	&,
 	&:hover:disabled {
 		border-color: $vui-color-titanius;
-	}
-	&:hover, &.vui-input-hover {
-		border-color: $vui-color-pressicus;
+		border-width: 1px;
+		box-shadow: $box-shadow;
+		padding: $padding;
 	}
 
+	&:hover, &.vui-input-hover,
 	&:focus, &.vui-input-focus {
 		border-color: $vui-color-celestine;
 		border-width: 2px;
