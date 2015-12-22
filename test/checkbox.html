@@ -2,88 +2,64 @@
 <html>
 	<head>
 		<title>Checkbox Sample</title>
-		<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="test.css" />
-		<style>
-		html {
-			font-size: 20px;
-		}
-		body {
-			font-family: 'Lato', sans-serif;
-		}
-		span {
-			display: block;
-			margin-bottom: 10px;
-		}
-		.container {
-			width: 500px;
-		}
-		</style>
 	</head>
 	<body>
-		<div class="container on">
-			<h2>Mixins</h2>
-			<span>Checkbox (Unchecked)</span>
-			<p>
-				<input type="checkbox" id="cb-unchecked" />
-				<label for="cb-unchecked">checkbox</label>
-			</p>
-			<span>Checkbox (Checked)</span>
-			<p>
-				<input type="checkbox" id="cb-checked" checked />
-				<label for="cb-checked">checkbox</label>
-			</p>
-			<span>Checkbox (Disabled)</span>
-			<p>
-				<input type="checkbox" id="cb-disabled" disabled />
-				<label for="cb-disabled">checkbox</label>
-			</p>
-			<span>Checkbox (Focused)</span>
-			<p>
-				<input type="checkbox" id="cb-focus" />
-				<label for="cb-focus">checkbox</label>
-			</p>
-		</div>
-		<div class="container">
-			<h2>Class Names</h2>
-			<span>Checkbox (Unchecked)</span>
-			<p>
-				<input type="checkbox" class="vui-input" id="cb-unchecked" />
-				<label for="cb-unchecked">checkbox</label>
-			</p>
-			<span>Checkbox (Checked)</span>
-			<p>
-				<input type="checkbox" class="vui-input" id="cb-checked" checked />
-				<label for="cb-checked">checkbox</label>
-			</p>
-			<span>Checkbox (Disabled)</span>
-			<p>
-				<input type="checkbox" class="vui-input" id="cb-disabled" disabled />
-				<label for="cb-disabled">checkbox</label>
-			</p>
-			<span>Checkbox (Focused)</span>
-			<p>
-				<input type="checkbox" id="cb-focus" autofocus />
-				<label for="cb-focus">checkbox</label>
-			</p>
-		</div>
-		<div class="container off">
-			<h2>Style Not Applied (old IE)</h2>
-			<span>Checkbox (Unstyled, Unchecked)</span>
-			<p>
-				<input type="checkbox" id="cb-unstyled-unchecked" />
-				<label for="cb-unstyled-unchecked">checkbox</label>
-			</p>
-			<span>Checkbox (Checked)</span>
-			<p>
-				<input type="checkbox" id="cb-unstyled-checked" checked />
-				<label for="cb-unstyled-checked">checkbox</label>
-			</p>
-			<span>Checkbox (Disabled)</span>
-			<p>
-				<input type="checkbox" id="cb-unstyled-disabled" disabled />
-				<label for="cb-unstyled-disabled">checkbox</label>
-			</p>
-		</div>
+		<h2>Mixins</h2>
+		<table class="on">
+			<thead>
+				<tr>
+					<th></th>
+					<th>Enabled</th>
+					<th>Disabled</th>
+					<th>Hover</th>
+					<th>Focus</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Unchecked</th>
+					<td><input type="checkbox" /></td>
+					<td><input type="checkbox" disabled /></td>
+					<td><input type="checkbox" class="vui-input-hover" /></td>
+					<td><input type="checkbox" class="vui-input-focus" /></td>
+				</tr>
+				<tr>
+					<th>Checked</th>
+					<td><input type="checkbox" checked /></td>
+					<td><input type="checkbox" checked disabled /></td>
+					<td><input type="checkbox" checked class="vui-input-hover" /></td>
+					<td><input type="checkbox" checked class="vui-input-focus" /></td>
+				</tr>
+			</tbody>
+		</table>
+		<h2>Class Names</h2>
+		<table>
+			<thead>
+				<tr>
+					<th></th>
+					<th>Enabled</th>
+					<th>Disabled</th>
+					<th>Hover</th>
+					<th>Focus</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Unchecked</th>
+					<td><input type="checkbox" class="vui-input" /></td>
+					<td><input type="checkbox" class="vui-input" disabled /></td>
+					<td><input type="checkbox" class="vui-input vui-input-hover" /></td>
+					<td><input type="checkbox" class="vui-input vui-input-focus" /></td>
+				</tr>
+				<tr>
+					<th>Checked</th>
+					<td><input type="checkbox" class="vui-input" checked /></td>
+					<td><input type="checkbox" class="vui-input" checked disabled /></td>
+					<td><input type="checkbox" checked class="vui-input vui-input-hover" /></td>
+					<td><input type="checkbox" checked class="vui-input vui-input-focus" /></td>
+				</tr>
+			</tbody>
+		</table>
 	</body>
 </html>

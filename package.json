@@ -1,6 +1,6 @@
 {
   "name": "vui-input",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Mixins and CSS for applying input styles",
   "scripts": {
     "autoprefix": "postcss -c postcss.config.json",
@@ -16,7 +16,7 @@
     "perceptual-diff": "percy snapshot test/",
     "postinstall": "./node_modules/.bin/bower install",
     "pretest": "npm run build",
-    "test": "csslint input.css"
+    "test": "csslintnext input.css"
   },
   "repository": {
     "type": "git",
@@ -39,7 +39,7 @@
   "devDependencies": {
     "autoprefixer": "^6.1.2",
     "cpy": "^3.4.1",
-    "csslint": "^0.10.0",
+    "csslint-next": "^1.0.0",
     "images-to-variables": "^0.3.0",
     "node-sass": "^3.4.2",
     "postcss-cli": "^2.3.2",

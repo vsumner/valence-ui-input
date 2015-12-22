@@ -1,1 +1,1 @@
---ignore=box-sizing,compatible-vendor-prefixes,unqualified-attributes
+--ignore=box-sizing,compatible-vendor-prefixes,unqualified-attributes,adjoining-classes,tabs
