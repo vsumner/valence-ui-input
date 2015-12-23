@@ -33,6 +33,9 @@
 		font-size: inherit;
 		font-weight: 300;
 		line-height: $line-height;
+		&::placeholder {
+			color: $vui-color-titanius;
+		}
 	}
 
 	&,
