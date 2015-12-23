@@ -1,5 +1,6 @@
 @import '../input.scss';
 @import '../input-checkbox.scss';
+@import '../input-radio.scss';
 @import '../select.scss';
 @import '../textarea.scss';
 @import '../input.css.scss';
@@ -32,6 +33,9 @@ td {
 	}
 	input[type="checkbox"] {
 		@include vui-input-checkbox();
+	}
+	input[type="radio"] {
+		@include vui-input-radio();
 	}
 	select {
 		@include vui-input-select();

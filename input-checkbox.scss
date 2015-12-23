@@ -1,55 +1,10 @@
-@import 'bower_components/vui-colors/colors.scss';
-@import 'bower_components/vui-focus/focus.scss';
+@import 'checkbox-radio.scss';
 @import 'input-icons.scss';
 
-@mixin _vui-input-checkbox-legacy-outline() {
-	outline: 2px solid $vui-color-celestine-light-2;
-}
-
 @mixin vui-input-checkbox() {
-
-	@include vui-input(
-		$box-shadow: none,
-		$height: 22px,
-		$padding: 0,
-		$padding-focus: 0,
-		$width: 22px
+	@include _vui-input-checkbox-radio-helper(
+		checkbox,
+		$vui-checkbox,
+		0.3rem
 	);
-
-	appearance: none;
-	background-position: center center;
-	background-repeat: no-repeat;
-	transition-property: border-color, background-color;
-
-	&,
-	&:hover:disabled {
-		background-color: $vui-color-woolonardo;
-	}
-	&:hover,
-	&:focus,
-	&.vui-input-hover,
-	&.vui-input-focus {
-		background-color: $vui-color-titanius;
-	}
-	&:checked {
-		background-image: $vui-checkbox;
-	}
-
-	/* Firefox only */
-	/* https://bugzilla.mozilla.org/show_bug.cgi?id=605985 */
-	@-moz-document url-prefix() {
-		& {
-			appearance: checkbox;
-		}
-		&:focus {
-			@include _vui-input-checkbox-legacy-outline();
-		}
-	}
-	/* IE (not Edge) only */
-	@media screen and (min-width:0\0) {
-		&:focus {
-			@include _vui-input-checkbox-legacy-outline();
-		}
-	}
-
 }
