@@ -1,6 +1,29 @@
 @import 'bower_components/vui-colors/colors.scss';
 @import 'bower_components/vui-focus/focus.scss';
 
+@mixin _vui-input-checkbox-radio-label($type) {
+
+	display: inline-block;
+	padding-left: 1.6rem;
+	vertical-align: middle;
+
+	& > input[type="#{$type}"] {
+		margin-top: -0.2rem;
+		margin-right: 0.7rem;
+		margin-left: -1.6rem;
+	}
+
+	[dir="rtl"] & {
+		padding-right: 1.6rem;
+		padding-left: 0;
+		& > input[type="#{$type}"] {
+			margin-left: 0.7rem;
+			margin-right: -1.6rem;
+		}
+	}
+
+}
+
 @mixin _vui-input-legacy-outline() {
 	outline: 2px solid $vui-color-celestine-light-2;
 }

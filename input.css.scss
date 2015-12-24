@@ -27,3 +27,11 @@ select.vui-input {
 textarea.vui-input {
 	@include vui-input-textarea();
 }
+
+.vui-input-checkbox-label {
+	@include vui-input-checkbox-label();
+}
+
+.vui-input-radio-label {
+	@include vui-input-radio-label();
+}
