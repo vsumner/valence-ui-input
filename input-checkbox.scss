@@ -8,3 +8,7 @@
 		0.3rem
 	);
 }
+
+@mixin vui-input-checkbox-label() {
+	@include _vui-input-checkbox-radio-label("checkbox");
+}
