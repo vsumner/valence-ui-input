@@ -28,7 +28,8 @@ bower install vui-input
 @import "node_modules/vui-input/input.scss";
 
 .app {
-	input {
+	input[type="text"],
+	input[type="password"] {
 		@include vui-input;
 	}
 }
