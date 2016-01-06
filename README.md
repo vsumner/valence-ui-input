@@ -36,19 +36,41 @@ bower install vui-input
 
 **Checkbox:**
 
+```html
+<label>
+	<input type="checkbox" />
+	Apples are great!
+</label>
+```
+
 ```scss
 @import 'bower_components/vui-input/input-checkbox.scss'; // or...
 
 @import "node_modules/vui-input/input-checkbox.scss";
 
 .app {
+
+	label {
+		@include vui-input-checkbox-label;
+	}
+
 	input[type="checkbox"] {
 		@include vui-input-checkbox;
 	}
+
 }
 ```
 
+Note: the `vui-input-checkbox-label` mixin used above helps control the alignment of the label text in situations where it might wrap.
+
 **Radio:**
+
+```html
+<label>
+	<input type="radio" />
+	Apples are my favorite!
+</label>
+```
 
 ```scss
 @import 'bower_components/vui-input/input-radio.scss'; // or...
@@ -56,11 +78,19 @@ bower install vui-input
 @import "node_modules/vui-input/input-radio.scss";
 
 .app {
+
+	label {
+		@include vui-input-radio-label;
+	}
+
 	input[type="radio"] {
 		@include vui-input-radio;
 	}
+
 }
 ```
+
+Note: the `vui-input-radio-label` mixin used above helps control the alignment of the label text in situations where it might wrap.
 
 **Select:**
 
