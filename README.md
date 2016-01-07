@@ -4,126 +4,128 @@
 [![Build status][ci-image]][ci-url]
 [![Dependency Status][dependencies-image]][dependencies-url]
 
-This component contains Sass mixins and CSS that can be used to style inputs.
+This component contains [Sass mixins](http://sass-lang.com/) and CSS which can be used to style different types of HTML input elements (text, checkboxes, radios, selects and textareas).
+
+For further information on this component and other VUI components, see the docs at [ui.valence.d2l.com](http://ui.valence.d2l.com/).
 
 ## Installation
 
-Install from NPM:
-```shell
-npm install vui-input
-```
-
-Install from Bower:
+`vui-input` can be installed from [Bower][bower-url]:
 ```shell
 bower install vui-input
 ```
 
+Or alternatively from [NPM][npm-url]:
+```shell
+npm install vui-input
+```
+
 ## Usage
 
-**Text:**
+To style each type of input, first include its `SCSS` file from either `bower_components` or `node_modules`, depending on where it was installed from. Then, apply the mixin using a selector of your choosing -- an element or class selector is most common.
+
+### Text Inputs:
 
 ```scss
-@import 'bower_components/vui-input/input.scss'; // or...
-
+@import 'bower_components/vui-input/input.scss';
+// or...
 @import "node_modules/vui-input/input.scss";
 
-.app {
-	input[type="text"],
-	input[type="password"] {
-		@include vui-input;
-	}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"] {
+	@include vui-input();
 }
 ```
 
-**Checkbox:**
+### Checkboxes:
 
 ```html
-<label>
+<label class="checkbox-label">
 	<input type="checkbox" />
 	Apples are great!
 </label>
 ```
 
 ```scss
-@import 'bower_components/vui-input/input-checkbox.scss'; // or...
-
+@import 'bower_components/vui-input/input-checkbox.scss';
+// or...
 @import "node_modules/vui-input/input-checkbox.scss";
 
-.app {
+input[type="checkbox"] {
+	@include vui-input-checkbox();
+}
 
-	label {
-		@include vui-input-checkbox-label;
-	}
-
-	input[type="checkbox"] {
-		@include vui-input-checkbox;
-	}
-
+.checkbox-label {
+	@include vui-input-checkbox-label();
 }
 ```
 
-Note: the `vui-input-checkbox-label` mixin used above helps control the alignment of the label text in situations where it might wrap.
+Note: the `vui-input-checkbox-label` mixin used above helps control the alignment of the label text in situations where it might wrap onto multiple lines.
 
-**Radio:**
+### Radios:
 
 ```html
-<label>
+<label class="radio-label">
 	<input type="radio" />
 	Apples are my favorite!
 </label>
 ```
 
 ```scss
-@import 'bower_components/vui-input/input-radio.scss'; // or...
-
+@import 'bower_components/vui-input/input-radio.scss';
+// or...
 @import "node_modules/vui-input/input-radio.scss";
 
-.app {
+input[type="radio"] {
+	@include vui-input-radio();
+}
 
-	label {
-		@include vui-input-radio-label;
-	}
-
-	input[type="radio"] {
-		@include vui-input-radio;
-	}
-
+.radio-label {
+	@include vui-input-radio-label();
 }
 ```
 
-Note: the `vui-input-radio-label` mixin used above helps control the alignment of the label text in situations where it might wrap.
+Note: the `vui-input-radio-label` mixin used above helps control the alignment of the label text in situations where it might wrap onto multiple lines.
 
-**Select:**
+### Selects:
+
+```html
+<select>
+	<option>Option 1</option>
+	<option>Option 2</option>
+</select>
+```
 
 ```scss
-@import 'bower_components/vui-input/select.scss'; // or...
-
+@import 'bower_components/vui-input/select.scss';
+// or...
 @import "node_modules/vui-input/select.scss";
 
-.app {
-	select {
-		@include vui-input-select;
-	}
+select {
+	@include vui-input-select();
 }
 ```
 
-**Textarea:**
+### Textareas:
+
+```html
+<textarea></textarea>
+```
 
 ```scss
-@import 'bower_components/vui-input/textarea.scss'; // or...
-
+@import 'bower_components/vui-input/textarea.scss';
+// or...
 @import "node_modules/vui-input/textarea.scss";
 
-.app {
-	textarea {
-		@include vui-input-textarea;
-	}
+textarea {
+	@include vui-input-textarea();
 }
 ```
 
-For further information on this component and other VUI components, see the docs at [ui.valence.d2l.com](http://ui.valence.d2l.com/).
+## Coding styles
 
-#### Coding styles
 See the [VUI Best Practices & Style Guide](https://github.com/Brightspace/valence-ui-docs/wiki/Best-Practices-&-Style-Guide) for information on VUI naming conventions, plus information about the [EditorConfig](http://editorconfig.org) rules used in this repo.
 
 [bower-url]: http://bower.io/search/?q=vui-input
