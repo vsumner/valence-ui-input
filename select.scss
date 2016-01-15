@@ -30,6 +30,7 @@
 					color: $vui-color-ferrite;
 				}
 				background-image: $vui-select-hover;
+				padding-right: calc(1rem + 42px - 1px);
 			}
 			&,
 			&:disabled,
