@@ -1,17 +1,17 @@
+@import 'bower_components/vui-typography/typography.scss';
 @import '../input.scss';
 @import '../input-checkbox.scss';
 @import '../input-radio.scss';
+@import '../search.scss';
 @import '../select.scss';
 @import '../textarea.scss';
 @import '../input.css.scss';
-
-@import 'https://fonts.googleapis.com/css?family=Lato:400,300';
 
 html {
 	font-size: 20px;
 }
 body {
-	font-family: 'Lato', sans-serif;
+	@include vui-typography();
 	margin: 1rem;
 }
 table {
@@ -43,4 +43,14 @@ td {
 	textarea {
 		@include vui-input-textarea();
 	}
+}
+
+.search {
+	@include vui-input-search-container();
+}
+.search-button {
+	@include vui-input-search-button();
+}
+.clear-button {
+	@include vui-input-search-clear-button();
 }
