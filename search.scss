@@ -5,6 +5,7 @@
 	& input[type="text"],
 	& input[type="search"] {
 		@include vui-input();
+		appearance: none;
 		&:focus,
 		&:hover,
 		&.vui-input-hover,
