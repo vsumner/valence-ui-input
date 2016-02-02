@@ -56,6 +56,11 @@
 		padding: $padding-focus;
 	}
 
+	&:invalid,
+	&[aria-invalid='true'] {
+		border-color: $vui-color-cinnabar;
+	}
+
 	&:disabled {
 		opacity: 0.5;
 	}
