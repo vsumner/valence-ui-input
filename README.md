@@ -91,7 +91,7 @@ HTML:
 ```html
 <label class="radio-label">
 	<input type="radio" />
-	Apples are my favorite!
+	I prefer apples compared to bananas
 </label>
 ```
 
@@ -149,7 +149,7 @@ Result:
 HTML:
 
 ```html
-<textarea></textarea>
+<textarea placeholder="Enter a description..."></textarea>
 ```
 
 SASS:
