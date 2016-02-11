@@ -5,16 +5,17 @@
   "scripts": {
     "autoprefix": "postcss -c postcss.config.json",
     "autoprefix:test": "postcss -c ./test/postcss.config.json",
-    "clean": "rimraf *.css && rimraf ./test/*.css",
+    "clean": "rimraf *.css && rimraf ./test/*.css && rimraf ./screenshots/*.png",
     "build:sass:icons": "imgtoscss -p vui- -o input-icons.scss ./images/*.svg",
     "build:sass:test": "node-sass --output-style expanded ./test/test.scss ./test/test.css",
     "postbuild:sass:test": "npm run autoprefix:test",
     "build:sass": "node-sass --output-style expanded input.css.scss input.css",
     "postbuild:sass": "npm run autoprefix",
     "prebuild": "npm run clean && npm run build:sass:icons",
-    "build": "npm run build:sass && npm run build:sass:test",
+    "build": "npm run build:sass && npm run build:sass:test && npm run screenshot",
     "perceptual-diff": "percy snapshot test/",
     "postinstall": "./node_modules/.bin/bower install",
+    "screenshot": "phantomjs ./screenshots/build.js",
     "pretest": "npm run build",
     "test": "csslintnext input.css"
   },
@@ -41,6 +42,7 @@
     "csslint-next": "^1.1.1",
     "images-to-variables": "^0.3.0",
     "node-sass": "^3.4.2",
+    "phantomjs-prebuilt": "^2.1.4",
     "postcss-cli": "^2.5.1",
     "rimraf": "^2.5.1"
   }
