@@ -6,7 +6,7 @@
 
 This component contains [Sass mixins](http://sass-lang.com/) and CSS which can be used to style different types of HTML input elements (text, checkboxes, radios, selects and textareas).
 
-For further information on this component and other VUI components, see the docs at [ui.valence.d2l.com](http://ui.valence.d2l.com/).
+For further information on this and other VUI components, see the docs at [ui.valence.d2l.com](http://ui.valence.d2l.com/).
 
 ## Installation
 
@@ -26,12 +26,18 @@ To style each type of input, first include its `SCSS` file from either `bower_co
 
 ### Text Inputs:
 
-![screenshot of text input](/screenshots/text.png?raw=true)
+HTML:
+
+```html
+<input type="text" placeholder="Enter a name..." />
+```
+
+SASS:
 
 ```scss
 @import 'bower_components/vui-input/input.scss';
 // or...
-@import "node_modules/vui-input/input.scss";
+@import 'node_modules/vui-input/input.scss';
 
 input[type="text"],
 input[type="password"],
@@ -41,16 +47,22 @@ input[type="url"] {
 }
 ```
 
+Result:
+
+![screenshot of text input](/screenshots/text.png?raw=true)
+
 ### Checkboxes:
 
-![screenshot of checkboxes](/screenshots/checkbox.png?raw=true)
+HTML:
 
 ```html
 <label class="checkbox-label">
 	<input type="checkbox" />
-	Apples are great!
+	I would like some apples
 </label>
 ```
+
+SASS:
 
 ```scss
 @import 'bower_components/vui-input/input-checkbox.scss';
@@ -68,9 +80,13 @@ input[type="checkbox"] {
 
 Note: the `vui-input-checkbox-label` mixin used above helps control the alignment of the label text in situations where it might wrap onto multiple lines.
 
+Result:
+
+![screenshot of checkboxes](/screenshots/checkbox.png?raw=true)
+
 ### Radios:
 
-![screenshot of radio buttons](/screenshots/radio.png?raw=true)
+HTML:
 
 ```html
 <label class="radio-label">
@@ -78,6 +94,8 @@ Note: the `vui-input-checkbox-label` mixin used above helps control the alignmen
 	Apples are my favorite!
 </label>
 ```
+
+SASS:
 
 ```scss
 @import 'bower_components/vui-input/input-radio.scss';
@@ -95,9 +113,13 @@ input[type="radio"] {
 
 Note: the `vui-input-radio-label` mixin used above helps control the alignment of the label text in situations where it might wrap onto multiple lines.
 
+Result:
+
+![screenshot of radio buttons](/screenshots/radio.png?raw=true)
+
 ### Selects:
 
-![screenshot of select inputs](/screenshots/select.png?raw=true)
+HTML:
 
 ```html
 <select>
@@ -105,6 +127,8 @@ Note: the `vui-input-radio-label` mixin used above helps control the alignment o
 	<option>Option 2</option>
 </select>
 ```
+
+SASS:
 
 ```scss
 @import 'bower_components/vui-input/select.scss';
@@ -116,13 +140,19 @@ select {
 }
 ```
 
+Result:
+
+![screenshot of select inputs](/screenshots/select.png?raw=true)
+
 ### Textareas:
 
-![screenshot of textareas](/screenshots/textarea.png?raw=true)
+HTML:
 
 ```html
 <textarea></textarea>
 ```
+
+SASS:
 
 ```scss
 @import 'bower_components/vui-input/textarea.scss';
@@ -133,6 +163,10 @@ textarea {
 	@include vui-input-textarea();
 }
 ```
+
+Result:
+
+![screenshot of textareas](/screenshots/textarea.png?raw=true)
 
 ## Coding styles
 
