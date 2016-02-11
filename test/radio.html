@@ -5,109 +5,104 @@
 		<link rel="stylesheet" type="text/css" href="test.css" />
 	</head>
 	<body>
-		<h2>Mixins</h2>
-		<table class="on">
-			<thead>
-				<tr>
-					<th></th>
-					<th>Enabled</th>
-					<th>Disabled</th>
-					<th>Hover</th>
-					<th>Focus</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th>Unchecked</th>
-					<td><input type="radio" /></td>
-					<td><input type="radio" disabled /></td>
-					<td><input type="radio" class="vui-input-hover" /></td>
-					<td><input type="radio" class="vui-input-focus" /></td>
-				</tr>
-				<tr>
-					<th>Checked</th>
-					<td><input type="radio" checked /></td>
-					<td><input type="radio" checked disabled /></td>
-					<td><input type="radio" checked class="vui-input-hover" /></td>
-					<td><input type="radio" checked class="vui-input-focus" /></td>
-				</tr>
-			</tbody>
-		</table>
-		<h2>Invalid</h2>
-		<table class="on">
-			<thead>
-				<tr>
-					<th></th>
-					<th>Enabled</th>
-					<th>Disabled</th>
-					<th>Hover</th>
-					<th>Focus</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th>Unchecked</th>
-					<td><input type="radio" aria-invalid="true" /></td>
-					<td><input type="radio" aria-invalid="true" disabled /></td>
-					<td><input type="radio" aria-invalid="true" class="vui-input-hover" /></td>
-					<td><input type="radio" aria-invalid="true" class="vui-input-focus" /></td>
-				</tr>
-				<tr>
-					<th>Checked</th>
-					<td><input type="radio" aria-invalid="true" checked /></td>
-					<td><input type="radio" aria-invalid="true" checked disabled /></td>
-					<td><input type="radio" aria-invalid="true" checked class="vui-input-hover" /></td>
-					<td><input type="radio" aria-invalid="true" checked class="vui-input-focus" /></td>
-				</tr>
-			</tbody>
-		</table>
-		<h2>Class Names</h2>
+		<h2>Radio Buttons</h2>
 		<table>
 			<thead>
 				<tr>
 					<th></th>
+					<th></th>
+					<th></th>
 					<th>Enabled</th>
 					<th>Disabled</th>
-					<th>Hover</th>
 					<th>Focus</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<th>Unchecked</th>
-					<td><input type="radio" class="vui-input" /></td>
-					<td><input type="radio" class="vui-input" disabled /></td>
-					<td><input type="radio" class="vui-input vui-input-hover" /></td>
-					<td><input type="radio" class="vui-input vui-input-focus" /></td>
+				<tr class="on">
+					<td>Valid</td>
+					<td>Unchecked</td>
+					<td>Mixin</td>
+					<td><input type="radio" /></td>
+					<td><input type="radio" disabled /></td>
+					<td><input type="radio" class="vui-input-focus" /></td>
 				</tr>
 				<tr>
-					<th>Checked</th>
+					<td>Valid</td>
+					<td>Unchecked</td>
+					<td>Class</td>
+					<td><input type="radio" class="vui-input" /></td>
+					<td><input type="radio" class="vui-input" disabled /></td>
+					<td><input type="radio" class="vui-input vui-input-focus" /></td>
+				</tr>
+				<tr class="on">
+					<td>Valid</td>
+					<td>Checked</td>
+					<td>Mixin</td>
+					<td><input type="radio" checked /></td>
+					<td><input type="radio" checked disabled /></td>
+					<td><input type="radio" checked class="vui-input-focus" /></td>
+				</tr>
+				<tr>
+					<td>Valid</td>
+					<td>Checked</td>
+					<td>Class</td>
 					<td><input type="radio" class="vui-input" checked /></td>
 					<td><input type="radio" class="vui-input" checked disabled /></td>
-					<td><input type="radio" checked class="vui-input vui-input-hover" /></td>
 					<td><input type="radio" checked class="vui-input vui-input-focus" /></td>
+				</tr>
+				<tr class="on">
+					<td>Invalid</td>
+					<td>Unchecked</td>
+					<td>Mixin</td>
+					<td><input type="radio" aria-invalid="true" /></td>
+					<td><input type="radio" aria-invalid="true" disabled /></td>
+					<td><input type="radio" aria-invalid="true" class="vui-input-focus" /></td>
+				</tr>
+				<tr>
+					<td>Invalid</td>
+					<td>Unchecked</td>
+					<td>Class</td>
+					<td><input type="radio" class="vui-input" aria-invalid="true" /></td>
+					<td><input type="radio" class="vui-input" aria-invalid="true" disabled /></td>
+					<td><input type="radio" class="vui-input vui-input-focus" aria-invalid="true" /></td>
+				</tr>
+				<tr class="on">
+					<td>Invalid</td>
+					<td>Checked</td>
+					<td>Mixin</td>
+					<td><input type="radio" aria-invalid="true" checked /></td>
+					<td><input type="radio" aria-invalid="true" checked disabled /></td>
+					<td><input type="radio" aria-invalid="true" checked class="vui-input-focus" /></td>
+				</tr>
+				<tr>
+					<td>Invalid</td>
+					<td>Checked</td>
+					<td>Class</td>
+					<td><input type="radio" class="vui-input" aria-invalid="true" checked /></td>
+					<td><input type="radio" class="vui-input" aria-invalid="true" checked disabled /></td>
+					<td><input type="radio" checked class="vui-input vui-input-focus" aria-invalid="true" /></td>
 				</tr>
 			</tbody>
 		</table>
 		<h2>Labels</h2>
 		<p>
-			<label class="vui-input-radio-label">
+			<label class="vui-input-radio-label" style="width:200px;">
 				<input class="vui-input" type="radio" name="normal" checked />
-				Normal radio label 1
+				I prefer Apples compared to Bananas
 			</label><br />
-			<label class="vui-input-radio-label">
+			<label class="vui-input-radio-label" style="width:200px;">
 				<input class="vui-input" type="radio" name="normal" />
-				Normal radio label 2
+				No way, Bananas are the only correct choice
 			</label>
 		</p>
 		<p dir="rtl" style="width:500px;">
-			<label class="vui-input-radio-label">
+			<label class="vui-input-radio-label" style="width:200px;">
 				<input class="vui-input" type="radio" name="rtl" />
-				RTL radio label 1
+				RTL radio label 1 that wraps onto multiple lines
 			</label><br />
-			<label class="vui-input-radio-label">
+			<label class="vui-input-radio-label" style="width:200px;">
 				<input class="vui-input" type="radio" name="rtl" checked />
-				RTL radio label 2
+				RTL radio label 2 that wraps onto multiple lines
 			</label>
 		</p>
 	</body>

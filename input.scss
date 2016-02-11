@@ -47,8 +47,9 @@
 		padding: $padding;
 	}
 
-	&:hover, &.vui-input-hover,
-	&:focus, &.vui-input-focus {
+	&:hover,
+	&:focus,
+	&.vui-input-focus {
 		background-color: $background-color-hover;
 		border-color: $vui-color-celestine;
 		border-width: 2px;

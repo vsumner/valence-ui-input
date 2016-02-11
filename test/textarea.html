@@ -5,87 +5,82 @@
 		<link rel="stylesheet" type="text/css" href="test.css" />
 	</head>
 	<body>
-		<h2>Mixins</h2>
-		<table class="on">
-			<thead>
-				<tr>
-					<th></th>
-					<th>Enabled</th>
-					<th>Disabled</th>
-					<th>Hover</th>
-					<th>Focus</th>
-				</tr>
-			</tbody>
-			<tbody>
-				<tr>
-					<th>Normal</th>
-					<td><textarea>textarea value</textarea></td>
-					<td><textarea disabled>disabled value</textarea></td>
-					<td><textarea class="vui-input-hover">hover value</textarea></td>
-					<td><textarea class="vui-input-focus">focus value</textarea></td>
-				</tr>
-				<tr>
-					<th>Placeholder</th>
-					<td><textarea placeholder="value"></textarea></td>
-					<td><textarea placeholder="value" disabled></textarea></td>
-					<td><textarea placeholder="value" class="vui-input-hover"></textarea></td>
-					<td><textarea placeholder="value" class="vui-input-focus"></textarea></td>
-				</tr>
-			</tbody>
-		</table>
-		<h2>Invalid</h2>
-		<table class="on">
-			<thead>
-				<tr>
-					<th></th>
-					<th>Enabled</th>
-					<th>Disabled</th>
-					<th>Hover</th>
-					<th>Focus</th>
-				</tr>
-			</tbody>
-			<tbody>
-				<tr>
-					<th>Normal</th>
-					<td><textarea aria-invalid="true">textarea value</textarea></td>
-					<td><textarea aria-invalid="true" disabled>disabled value</textarea></td>
-					<td><textarea aria-invalid="true" class="vui-input-hover">hover value</textarea></td>
-					<td><textarea aria-invalid="true" class="vui-input-focus">focus value</textarea></td>
-				</tr>
-				<tr>
-					<th>Placeholder</th>
-					<td><textarea aria-invalid="true" placeholder="value"></textarea></td>
-					<td><textarea aria-invalid="true" placeholder="value" disabled></textarea></td>
-					<td><textarea aria-invalid="true" placeholder="value" class="vui-input-hover"></textarea></td>
-					<td><textarea aria-invalid="true" placeholder="value" class="vui-input-focus"></textarea></td>
-				</tr>
-			</tbody>
-		</table>
-		<h2>Class Names</h2>
+		<h2>Textareas</h2>
 		<table>
 			<thead>
 				<tr>
 					<th></th>
+					<th></th>
+					<th></th>
 					<th>Enabled</th>
 					<th>Disabled</th>
-					<th>Hover</th>
 					<th>Focus</th>
 				</tr>
 			</tbody>
 			<tbody>
-				<tr>
-					<th>Normal</th>
-					<td><textarea class="vui-input">textarea value</textarea></td>
-					<td><textarea class="vui-input" disabled>disabled value</textarea></td>
-					<td><textarea class="vui-input vui-input-hover">hover value</textarea></td>
-					<td><textarea class="vui-input vui-input-focus">focus value</textarea></td>
+				<tr class="on">
+					<td>Valid</td>
+					<td>Normal</td>
+					<td>Mixin</td>
+					<td><textarea>textarea value</textarea></td>
+					<td><textarea disabled>disabled value</textarea></td>
+					<td><textarea class="vui-input-focus">focus value</textarea></td>
 				</tr>
 				<tr>
-					<th>Placeholder</th>
+					<td>Valid</td>
+					<td>Normal</td>
+					<td>Class</td>
+					<td><textarea class="vui-input">textarea value</textarea></td>
+					<td><textarea class="vui-input" disabled>disabled value</textarea></td>
+					<td><textarea class="vui-input vui-input-focus">focus value</textarea></td>
+				</tr>
+				<tr class="on">
+					<td>Valid</td>
+					<td>Placeholder</td>
+					<td>Mixin</td>
+					<td><textarea placeholder="value"></textarea></td>
+					<td><textarea placeholder="value" disabled></textarea></td>
+					<td><textarea placeholder="value" class="vui-input-focus"></textarea></td>
+				</tr>
+				<tr>
+					<td>Valid</td>
+					<td>Placeholder</td>
+					<td>Class</td>
 					<td><textarea placeholder="value" class="vui-input"></textarea></td>
 					<td><textarea placeholder="value" class="vui-input" disabled></textarea></td>
-					<td><textarea placeholder="value" class="vui-input vui-input-hover"></textarea></td>
 					<td><textarea placeholder="value" class="vui-input vui-input-focus"></textarea></td>
+				</tr>
+				<tr class="on">
+					<td>Invalid</td>
+					<td>Normal</td>
+					<td>Mixin</td>
+					<td><textarea aria-invalid="true">textarea value</textarea></td>
+					<td><textarea aria-invalid="true" disabled>disabled value</textarea></td>
+					<td><textarea aria-invalid="true" class="vui-input-focus">focus value</textarea></td>
+				</tr>
+				<tr>
+					<td>Invalid</td>
+					<td>Normal</td>
+					<td>Class</td>
+					<td><textarea aria-invalid="true" class="vui-input">textarea value</textarea></td>
+					<td><textarea aria-invalid="true" class="vui-input" disabled>disabled value</textarea></td>
+					<td><textarea aria-invalid="true" class="vui-input vui-input-focus">focus value</textarea></td>
+				</tr>
+				<tr class="on">
+					<td>Invalid</td>
+					<td>Placeholder</td>
+					<td>Mixin</td>
+					<td><textarea aria-invalid="true" placeholder="value"></textarea></td>
+					<td><textarea aria-invalid="true" placeholder="value" disabled></textarea></td>
+					<td><textarea aria-invalid="true" placeholder="value" class="vui-input-focus"></textarea></td>
+				</tr>
+				<tr>
+					<td>Invalid</td>
+					<td>Placeholder</td>
+					<td>Class</td>
+					<td><textarea aria-invalid="true" placeholder="value" class="vui-input"></textarea></td>
+					<td><textarea aria-invalid="true" placeholder="value" class="vui-input" disabled></textarea></td>
+					<td><textarea aria-invalid="true" placeholder="value" class="vui-input vui-input-focus"></textarea></td>
 				</tr>
 			</tbody>
 		</table>

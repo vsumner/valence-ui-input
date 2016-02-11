@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Select Input Sample</title>
+		<link rel="stylesheet" type="text/css" href="test.css" />
+	</head>
+	<body>
+		<h2>Selects</h2>
+		<table>
+			<thead>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th>Enabled</th>
+					<th>Disabled</th>
+					<th>Focus</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="on">
+					<td>LTR</td>
+					<td>Valid</td>
+					<td>Mixin</td>
+					<td>
+						<select>
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</td>
+					<td>
+						<select disabled>
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</td>
+					<td>
+						<select class="vui-input-focus">
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>LTR</td>
+					<td>Valid</td>
+					<td>Class</td>
+					<td>
+						<select class="vui-input">
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</td>
+					<td>
+						<select class="vui-input" disabled>
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</td>
+					<td>
+						<select class="vui-input vui-input-focus">
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</td>
+				</tr>
+				<tr class="on">
+					<td>LTR</td>
+					<td>Invalid</td>
+					<td>Mixin</td>
+					<td>
+						<select aria-invalid="true">
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</td>
+					<td>
+						<select aria-invalid="true" disabled>
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</td>
+					<td>
+						<select aria-invalid="true" class="vui-input-focus">
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</td>
+				</tr>
+				<tr class="on">
+					<td>LTR</td>
+					<td>Invalid</td>
+					<td>Class</td>
+					<td>
+						<select aria-invalid="true" class="vui-input">
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</td>
+					<td>
+						<select aria-invalid="true" disabled class="vui-input">
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</td>
+					<td>
+						<select aria-invalid="true" class="vui-input vui-input-focus">
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</td>
+				</tr>
+				<tr dir="rtl">
+					<td>RTL</td>
+					<td>Valid</td>
+					<td>Mixin</td>
+					<td class="on">
+						<select>
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</td>
+					<td class="on">
+						<select disabled>
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</td>
+					<td class="on">
+						<select class="vui-input-focus">
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</td>
+				</tr>
+				<tr dir="rtl">
+					<td>RTL</td>
+					<td>Valid</td>
+					<td>Class</td>
+					<td>
+						<select class="vui-input">
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</td>
+					<td>
+						<select disabled class="vui-input">
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</td>
+					<td>
+						<select class="vui-input vui-input-focus">
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</td>
+				</tr>
+				<tr dir="rtl">
+					<td>RTL</td>
+					<td>Invalid</td>
+					<td>Mixin</td>
+					<td class="on">
+						<select aria-invalid="true">
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</td>
+					<td class="on">
+						<select aria-invalid="true" disabled>
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</td>
+					<td class="on">
+						<select aria-invalid="true" class="vui-input-focus">
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</td>
+				</tr>
+				<tr dir="rtl">
+					<td>RTL</td>
+					<td>Invalid</td>
+					<td>Class</td>
+					<td>
+						<select aria-invalid="true" class="vui-input">
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</td>
+					<td>
+						<select aria-invalid="true" disabled class="vui-input">
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</td>
+					<td>
+						<select aria-invalid="true" class="vui-input vui-input-focus">
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
