@@ -54,3 +54,7 @@ td {
 .clear-button {
 	@include vui-input-search-clear-button();
 }
+
+.screenshot {
+	display: inline-block;
+}
