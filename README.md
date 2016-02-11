@@ -26,6 +26,8 @@ To style each type of input, first include its `SCSS` file from either `bower_co
 
 ### Text Inputs:
 
+![screenshot of text input](/screenshots/text.png?raw=true)
+
 ```scss
 @import 'bower_components/vui-input/input.scss';
 // or...
@@ -40,6 +42,8 @@ input[type="url"] {
 ```
 
 ### Checkboxes:
+
+![screenshot of checkboxes](/screenshots/checkbox.png?raw=true)
 
 ```html
 <label class="checkbox-label">
@@ -66,6 +70,8 @@ Note: the `vui-input-checkbox-label` mixin used above helps control the alignmen
 
 ### Radios:
 
+![screenshot of radio buttons](/screenshots/radio.png?raw=true)
+
 ```html
 <label class="radio-label">
 	<input type="radio" />
@@ -91,6 +97,8 @@ Note: the `vui-input-radio-label` mixin used above helps control the alignment o
 
 ### Selects:
 
+![screenshot of select inputs](/screenshots/select.png?raw=true)
+
 ```html
 <select>
 	<option>Option 1</option>
@@ -109,6 +117,8 @@ select {
 ```
 
 ### Textareas:
+
+![screenshot of textareas](/screenshots/textarea.png?raw=true)
 
 ```html
 <textarea></textarea>
