@@ -58,7 +58,11 @@ HTML:
 ```html
 <label class="checkbox-label">
 	<input type="checkbox" />
-	I would like some apples
+	ketchup
+</label><br />
+<label class="checkbox-label">
+	<input type="checkbox" />
+	mustard
 </label>
 ```
 
@@ -90,8 +94,12 @@ HTML:
 
 ```html
 <label class="radio-label">
-	<input type="radio" />
-	I prefer apples compared to bananas
+	<input type="radio" name="food" checked />
+	hot dog
+</label><br />
+<label class="radio-label">
+	<input type="radio" name="food" />
+	hamburger
 </label>
 ```
 
