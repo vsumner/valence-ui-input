@@ -53,16 +53,16 @@ Result:
 
 ### Checkboxes:
 
+**Browser Compatibility:** Due to lack of support for custom input styling in Firefox and older versions of IE, checkboxes rendered in those browsers will have the operating system default style.
+
 HTML:
 
 ```html
 <label class="checkbox-label">
-	<input type="checkbox" />
-	ketchup
+	<input type="checkbox" />ketchup
 </label><br />
 <label class="checkbox-label">
-	<input type="checkbox" />
-	mustard
+	<input type="checkbox" />mustard
 </label>
 ```
 
@@ -90,16 +90,16 @@ Result:
 
 ### Radios:
 
+**Browser Compatibility:** Due to lack of support for custom input styling in Firefox and older versions of IE, radio buttons rendered in those browsers will have the operating system default style.
+
 HTML:
 
 ```html
 <label class="radio-label">
-	<input type="radio" name="food" checked />
-	hot dog
+	<input type="radio" name="food" checked />hot dog
 </label><br />
 <label class="radio-label">
-	<input type="radio" name="food" />
-	hamburger
+	<input type="radio" name="food" />hamburger
 </label>
 ```
 
