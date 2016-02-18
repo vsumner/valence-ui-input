@@ -1,5 +1,6 @@
 @import 'bower_components/vui-colors/colors.scss';
 @import 'bower_components/vui-focus/focus.scss';
+@import 'bower_components/vui-typography/px-to-base-rem.scss';
 
 @mixin vui-input(
 		$background-color: $vui-color-white,
@@ -30,8 +31,9 @@
 	@if $has-text {
 		color: $vui-color-ferrite;
 		font-family: inherit;
-		font-size: inherit;
+		font-size: 1rem;
 		font-weight: 300;
+		letter-spacing: px-to-base-rem(0.3px);
 		line-height: $line-height;
 		&::placeholder {
 			color: $vui-color-titanius;
