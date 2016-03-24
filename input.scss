@@ -1,6 +1,6 @@
-@import 'bower_components/vui-colors/colors.scss';
+@import 'node_modules/vui-colors/colors.scss';
 @import 'bower_components/vui-focus/focus.scss';
-@import 'bower_components/vui-typography/px-to-base-rem.scss';
+@import 'node_modules/vui-typography/px-to-base-rem.scss';
 
 @mixin vui-input(
 		$background-color: $vui-color-white,
