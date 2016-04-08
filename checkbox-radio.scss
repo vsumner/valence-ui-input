@@ -63,8 +63,6 @@
 	@-moz-document url-prefix() {
 		& {
 			appearance: $appearance;
-			height: auto;
-			width: auto;
 		}
 		&:focus {
 			@include _vui-input-legacy-outline();
