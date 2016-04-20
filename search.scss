@@ -6,6 +6,7 @@
 	& input[type="search"] {
 		@include vui-input();
 		appearance: none;
+		-webkit-appearance: textfield;
 		&:focus,
 		&:hover,
 		&.vui-input-hover,
@@ -17,6 +18,9 @@
 		&:focus:disabled,
 		&:hover:disabled {
 			padding-right: 2.2rem;
+		}
+		&::-webkit-search-decoration {
+			-webkit-appearance: none;
 		}
 		[dir="rtl"] & {
 			&:focus,
