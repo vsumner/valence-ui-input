@@ -26,6 +26,10 @@
 		}
 	}
 
+	&:last-of-type {
+		margin-bottom: 0.5rem;
+	}
+
 }
 
 @mixin _vui-input-legacy-outline() {
