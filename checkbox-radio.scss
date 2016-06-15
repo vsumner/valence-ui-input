@@ -1,4 +1,4 @@
-@import 'bower_components/vui-colors/colors.scss';
+@import 'bower_components/d2l-colors/d2l-colors.scss';
 @import 'bower_components/vui-focus/focus.scss';
 
 @mixin _vui-input-checkbox-radio-label(
@@ -33,7 +33,7 @@
 }
 
 @mixin _vui-input-legacy-outline() {
-	outline: 2px solid $vui-color-celestine-light-2;
+	outline: 2px solid $d2l-color-celestine-light-2;
 }
 
 @mixin _vui-input-checkbox-radio-helper(
@@ -43,8 +43,8 @@
 	) {
 
 	@include vui-input(
-		$background-color: $vui-color-woolonardo,
-		$background-color-hover: $vui-color-gypsum,
+		$background-color: $d2l-color-woolonardo,
+		$background-color-hover: $d2l-color-gypsum,
 		$border-radius: $border-radius,
 		$box-shadow: none,
 		$has-text: false,

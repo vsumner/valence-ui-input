@@ -1,7 +1,6 @@
 @import 'input.scss';
 @import 'input-icons.scss';
-@import 'bower_components/vui-colors/colors.scss';
-@import 'bower_components/vui-typography/px-to-base-rem.scss';
+@import 'bower_components/d2l-colors/d2l-colors.scss';
 
 @mixin vui-input-select() {
 
@@ -27,7 +26,7 @@
 			&.vui-input-focus {
 				&::-ms-value {
 					background-color: transparent;
-					color: $vui-color-ferrite;
+					color: $d2l-color-ferrite;
 				}
 				background-image: $vui-select-hover;
 				padding-right: calc(1rem + 42px - 1px);
@@ -55,7 +54,7 @@
 			&:focus:disabled,
 			&:hover:disabled {
 				background-image: $vui-select-normal-rtl;
-				padding-right: px-to-base-rem(20);
+				padding-right: 1rem;
 				padding-left: calc(1rem + 42px);
 			}
 		}
