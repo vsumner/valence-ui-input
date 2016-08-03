@@ -14,7 +14,7 @@
 	& > input[type="#{$type}"] {
 		margin-top: -0.2rem;
 		margin-right: 0.6rem;
-		margin-left: -1.6rem;
+		margin-left: -1.7rem;
 	}
 
 	[dir="rtl"] & {
@@ -22,7 +22,7 @@
 		padding-left: $padding-right;
 		& > input[type="#{$type}"] {
 			margin-left: 0.6rem;
-			margin-right: -1.6rem;
+			margin-right: -1.7rem;
 		}
 	}
 
