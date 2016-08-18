@@ -2,7 +2,7 @@
   "name": "vui-input",
   "main": "input.scss",
   "dependencies": {
-    "d2l-colors": "~2.0.0",
+    "d2l-colors": "^2.1.0",
     "vui-focus": "~0.7.1"
   },
   "license": "Apache-2.0",
