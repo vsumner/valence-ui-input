@@ -1,5 +1,4 @@
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../d2l-colors/d2l-colors.html">
 <link rel="import" href="./d2l-input-shared-styles.html">
 <link rel="import" href="./d2l-input-icons.html">
 
@@ -12,10 +11,10 @@ input styling
 
 <dom-module id="d2l-checkbox">
   <template>
-    <style include="d2l-colors d2l-input-icons d2l-input-shared-styles">
+    <style include="d2l-input-icons d2l-input-shared-styles">
       :host {
-		  --d2l-input-background-color: var(--d2l-color-woolonardo);
-		  --d2l-input-background-color-hover: var(--d2l-color-gypsum);
+		  --d2l-input-background-color: var(--d2l-checkradio-background-color);
+		  --d2l-input-background-color-hover: var(--d2l-checkradio-background-color-hover);
 		  --d2l-input-box-shadow: none;
 		  --d2l-input-height: 1.2rem;
 		  --d2l-input-padding: 0;
@@ -25,7 +24,7 @@ input styling
 
 		  @apply(--d2l-input);
 		  @apply(--d2l-input-appearance-none);
-		  
+
 		  background-position: center center;
 		  background-repeat: no-repeat;
 	  }
