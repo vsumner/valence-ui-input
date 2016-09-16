@@ -1,0 +1,133 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../d2l-colors/d2l-colors.html">
+<link rel="import" href="./d2l-input-shared-styles.html">
+<link rel="import" href="./d2l-input-icons.html">
+
+<!--
+`d2l-select`
+input styling
+
+@demo demo/index.html
+-->
+
+<dom-module id="d2l-select">
+  <template>
+    <style include="d2l-colors d2l-input-icons d2l-input-shared-styles">
+      :host {
+		  @apply(--d2l-input);
+		  @apply(--d2l-input-with-text);
+	  }
+
+	  :host:[aria-invalid='true'] {
+		  border-color: var(--d2l-input-aria-invalid-border-color);
+	  }
+
+	  :host::-webkit-search-cancel-button {
+		  @apply(--d2l-input-webkit-search-cancel-button);
+	  }
+
+	  :host::-ms-clear {
+		  @apply(--d2l-input-ms-clear);
+	  }
+
+	  :host:hover:disabled {
+		  @apply(--d2l-input-hover-disabled);
+	  }
+
+	  :host:disabled {
+		  @apply(--d2l-input-disabled);
+	  }
+
+	  :host:hover,
+	  :host:focus {
+		  @apply(--d2l-input-hover);
+	  }
+
+	  :host > option {
+		  font-weight: 300;
+	  }
+
+	  @media screen and (-webkit-min-device-pixel-ratio :0),
+		screen and (min--moz-device-pixel-ratio: 0),
+		screen and (-ms-high-contrast: active),
+		(-ms-high-contrast: none) {
+
+			:host::-ms-expand {
+				display: none;
+			}
+
+			:host:not([multiple]) {
+				background-image: var(--d2l-input-icon-select-normal);
+				padding-right: calc(1rem + 42px);
+				@apply(--d2l-input-appearance-none);
+				background-position: right center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				max-height: calc(2rem + 2px);
+			}
+
+			:host:not([multiple]):focus,
+			:host:not([multiple]):hover,
+			:host:not([multiple]).vui-input-hover,
+			:host:not([multiple]).vui-input-focus {
+				background-image: var(--d2l-input-icon-select-hover);
+				padding-right: calc(1rem + 42px - 1px);
+			}
+
+			:host:not([multiple]):focus::-ms-value,
+			:host:not([multiple]):hover::-ms-value,
+			:host:not([multiple]).vui-input-hover::-ms-value,
+			:host:not([multiple]).vui-input-focus::-ms-value {
+				background-color: transparent;
+				color: var(--d2l-color-ferrite);
+			}
+
+			:host:not([multiple]):disabled,
+			:host:not([multiple]):focus:disabled,
+			:host:not([multiple]):hover:disabled {
+				background-image: var(--d2l-input-icon-select-normal);
+				padding-right: calc(1rem + 42px);
+			}
+
+			[dir='rtl'] :host:not([multiple]) {
+				background-position: left center;
+			}
+
+			[dir='rtl'] :host:not([multiple]):focus,
+			[dir='rtl'] :host:not([multiple]):hover,
+			[dir='rtl'] :host:not([multiple]).vui-input-hover,
+			[dir='rtl'] :host:not([multiple]).vui-input-focus {
+				background-image: var(--d2l-input-icon-select-hover-rtl);
+				padding-left: calc(1rem + 42px - 1px);
+				padding-right: calc(1rem - 1px);
+			}
+
+			[dir='rtl'] :host:not([multiple]):disabled,
+			[dir='rtl'] :host:not([multiple]):focus:disabled,
+			[dir='rtl'] :host:not([multiple]):hover:disabled {
+				background-image: var(--d2l-input-icon-select-hover-rtl);
+				padding-right: 1rem;
+				padding-left: calc(1rem + 42px);
+			}
+
+
+
+
+		}
+
+    </style>
+    <content></content>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'd2l-select',
+      extends: 'select',
+      properties: {
+
+      },
+
+    });
+  </script>
+</dom-module>

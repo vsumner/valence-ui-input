@@ -1,0 +1,70 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../d2l-colors/d2l-colors.html">
+<link rel="import" href="./d2l-input-shared-styles.html">
+
+<!--
+`d2l-textarea`
+input styling
+
+@demo demo/index.html
+-->
+
+<dom-module id="d2l-textarea">
+  <template>
+    <style include="d2l-colors d2l-input-shared-styles">
+      :host {
+		  --d2l-input-line-height: normal;
+		  --d2l-input-padding: 0.5rem 1rem;
+		  --d2l-input-padding-focus: calc(0.5rem - 1px) calc(1rem - 1px);
+
+		  @apply(--d2l-input);
+		  @apply(--d2l-input-with-text);
+
+		  overflow: auto;
+	  }
+
+	  :host::-webkit-search-cancel-button {
+		  @apply(--d2l-input-webkit-search-cancel-button);
+	  }
+
+	  :host::-ms-clear {
+		  @apply(--d2l-input-ms-clear);
+	  }
+
+	  :host:[aria-invalid='true'] {
+		  border-color: var(--d2l-input-aria-invalid-border-color);
+	  }
+
+	  :host:hover:disabled {
+		  @apply(--d2l-input-hover-disabled);
+	  }
+
+	  :host:disabled {
+		  @apply(--d2l-input-disabled);
+	  }
+
+	  :host::placeholder {
+		  color: var(--d2l-input-placeholder-color);
+	  }
+
+	  :host:hover,
+	  :host:focus {
+		  @apply(--d2l-input-hover);
+	  }
+
+    </style>
+    <content></content>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'd2l-textarea',
+      extends: 'textarea',
+      properties: {
+
+      },
+
+    });
+  </script>
+</dom-module>

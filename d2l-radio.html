@@ -1,0 +1,101 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../d2l-colors/d2l-colors.html">
+<link rel="import" href="./d2l-input-shared-styles.html">
+<link rel="import" href="./d2l-input-icons.html">
+
+<!--
+`d2l-radio`
+input styling
+
+@demo demo/index.html
+-->
+
+<dom-module id="d2l-radio">
+  <template>
+    <style include="d2l-colors d2l-input-icons d2l-input-shared-styles">
+      :host {
+		  --d2l-input-background-color: var(--d2l-color-woolonardo);
+		  --d2l-input-background-color-hover: var(--d2l-color-gypsum);
+		  --d2l-input-box-shadow: none;
+		  --d2l-input-height: 1.2rem;
+		  --d2l-input-padding: 0;
+		  --d2l-input-padding-focus: 0;
+		  --d2l-input-width: 1.2rem;
+		  --d2l-input-border-radius: 0.55rem;
+
+		  @apply(--d2l-input);
+		  @apply(--d2l-input-appearance-none);
+
+		  background-position: center center;
+		  background-repeat: no-repeat;
+	  }
+
+	  :host:checked {
+		  background-image: var(--d2l-input-icon-radio);
+	  }
+
+	  :host::-webkit-search-cancel-button {
+		  @apply(--d2l-input-webkit-search-cancel-button);
+	  }
+
+	  :host::-ms-clear {
+		  @apply(--d2l-input-ms-clear);
+	  }
+
+	  :host:[aria-invalid='true'] {
+		  border-color: var(--d2l-input-aria-invalid-border-color);
+	  }
+
+	  :host:hover:disabled {
+		  @apply(--d2l-input-hover-disabled);
+	  }
+
+	  :host:disabled {
+		  @apply(--d2l-input-disabled);
+	  }
+
+	  :host::placeholder {
+		  color: var(--d2l-input-placeholder-color);
+	  }
+
+	  :host:hover,
+	  :host:focus {
+		  @apply(--d2l-input-hover);
+	  }
+
+	  /* Firefox only
+	  https://bugzilla.mozilla.org/show_bug.cgi?id=605985 */
+	  @-moz-document url-prefix() {
+		  :host {
+			  appearance: radio;
+		  }
+
+		  :host:focus {
+			  @apply(--d2l-input-legacy-outline);
+		  }
+
+	  }
+
+	  /* IE (not Edge) only */
+	  @media screen and (min-width:0\0) {
+		  :host:focus {
+			  @apply(--d2l-input-legacy-outline);
+		  }
+	  }
+
+    </style>
+    <content></content>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'd2l-radio',
+      extends: 'input',
+      properties: {
+
+      },
+
+    });
+  </script>
+</dom-module>

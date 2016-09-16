@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
 <head>
 	<title>d2l-input demo</title>
 	<meta charset="utf-8">
@@ -11,33 +10,78 @@
 	<link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
 
 	<link rel="import" href="../d2l-input.html">
-	<link rel="import" href="../d2l-input-checkbox.html">
+	<link rel="import" href="../d2l-select.html">
+	<link rel="import" href="../d2l-textarea.html">
+	<link rel="import" href="../d2l-checkbox.html">
+	<link rel="import" href="../d2l-radio.html">
 
 	<style is="custom-style" include="demo-pages-shared-styles">
-
+		html {
+			font-size: 20px;
+		}
 	</style>
 </head>
-
 <body>
 
 	<div class="vertical-section-container centered">
 		<h3>Basic d2l-input Demo</h3>
 		<demo-snippet>
 			<template>
-          <input is="d2l-input" type="text" placeholder="Some Placeholder" />
-        </template>
+          		<input is="d2l-input" type="text" placeholder="Some Placeholder" />
+        	</template>
 		</demo-snippet>
 	</div>
 
 	<div class="vertical-section-container centered">
-		<h3>Basic d2l-input-checkbox Demo</h3>
+		<h3>Basic Textarea Demo</h3>
 		<demo-snippet>
 			<template>
-          <input is="d2l-input" type="checkbox"/>
-        </template>
+          		<textarea is="d2l-textarea"></textarea>
+        	</template>
+		</demo-snippet>
+	</div>
+
+	<div class="vertical-section-container centered">
+		<h3>Basic Select Demo</h3>
+		<demo-snippet>
+			<template>
+	          <select is="d2l-select">
+				  <option disabled selected>Select an option</option>
+				  <option>Option 1</option>
+				  <option>Option 2</option>
+				  <option>Option 3</option>
+			  </select>
+        	</template>
+		</demo-snippet>
+	</div>
+
+	<div class="vertical-section-container centered">
+		<h3>Basic Checkbox Demo</h3>
+		<demo-snippet>
+			<template>
+				<label class="checkbox-label">
+      				<input is="d2l-checkbox" type="checkbox" checked />ketchup
+  				</label><br />
+  				<label class="checkbox-label">
+      				<input is="d2l-checkbox" type="checkbox" />mustard
+  				</label>
+        	</template>
+		</demo-snippet>
+	</div>
+
+	<div class="vertical-section-container centered">
+		<h3>Basic Radio Demo</h3>
+		<demo-snippet>
+			<template>
+				<label class="radio-label">
+      				<input type="radio" is="d2l-radio" name="food" checked />hot dog
+  				</label><br />
+  				<label class="radio-label">
+      				<input type="radio" is="d2l-radio" name="food" />hamburger
+  				</label>
+        	</template>
 		</demo-snippet>
 	</div>
 
 </body>
-
 </html>
