@@ -1,0 +1,69 @@
+<link rel="import" href="../polymer/polymer.html">
+<dom-module id="d2l-input-shared-styles">
+	<template>
+		<style>
+			:root {
+				--d2l-input-color: var(--d2l-color-ferrite);
+                --d2l-input-background-color: var(--d2l-color-white);
+                --d2l-input-placeholder-color: var(--d2l-color-titanius);
+                --d2l-input-disabled-hover-background-color: var(--d2l-color-titanius);
+                --d2l-input-focus-border-color: var(--d2l-color-celestine);
+                --d2l-input-aria-invalid-border-color: var(--d2l-color-cinnabar);
+
+                --d2l-input-boxshadow: inset 0 2px 0 0 rgba(185, 194, 208, .2);
+                --d2l-input-border-radius: 0.3rem;
+                --d2l-input-height: auto;
+                --d2l-input-line-height: 1.2rem;
+                --d2l-input-padding: 0.4rem 1rem;
+                --d2l-input-padding-focus: calc(0.4rem - 1px) calc(1rem - 1px);
+                --d2l-input-width: 100%;
+
+                --d2l-input: {
+                    border-radius: var(--d2l-input-border-radius);
+                    border-style: solid;
+                    box-sizing: border-box;
+                    display: inline-block;
+                    height: var(--d2l-input-height);
+                    margin: 0;
+                    vertical-align: middle;
+                    width: var(--d2l-input-width);
+                    transition: {
+                        duration: 0.5s;
+                        timing-function: ease;
+                        property: background-color, border-color;
+                    }
+                }
+
+                --d2l-input-with-text: {
+                    color: var(--d2l-input-color);
+                    font-family: inherit;
+                    font-size: 1rem;
+                    font-weight: 300;
+                    letter-spacing: 0.015rem;
+                    line-height: var(--d2l-input-line-height);
+                    /*&::placeholder {
+                        color: var(--d2l-input-placeholder-color);
+                    }*/
+                }
+
+                /*
+        $background-color: $d2l-color-white,
+		$background-color-hover: null,
+		$border-radius: 0.3rem,
+		$box-shadow: inset 0 2px 0 0 rgba(185, 194, 208, .2),
+		$has-text: true,
+		$height: auto,
+		$line-height: 1.2rem,
+		$padding: 0.4rem 1rem,
+		$padding-focus: calc(0.4rem - 1px) calc(1rem - 1px),
+		$width : 100%*/
+			}
+
+            :host {
+                
+            }
+
+
+		</style>
+	</template>
+</dom-module>

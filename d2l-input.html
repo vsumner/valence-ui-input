@@ -1,0 +1,143 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../d2l-colors/d2l-colors.html">
+
+<!--
+`d2l-input`
+input styling
+
+@demo demo/index.html 
+-->
+
+<dom-module id="d2l-input">
+  <template>
+    <style include="d2l-colors">
+      :host {
+        --d2l-input-color: var(--d2l-color-ferrite);
+        --d2l-input-background-color: var(--d2l-color-white);
+        --d2l-input-background-hover-color: var(--d2l-color-white);
+        --d2l-input-placeholder-color: var(--d2l-color-titanius);
+        --d2l-input-disabled-hover-background-color: var(--d2l-color-titanius);
+        --d2l-input-disabled-hover-border-color: var(--d2l-color-titanius);
+        --d2l-input-focus-border-color: var(--d2l-color-celestine);
+        --d2l-input-aria-invalid-border-color: var(--d2l-color-cinnabar);
+
+        --d2l-input-boxshadow: inset 0 2px 0 0 rgba(185, 194, 208, .2);
+        --d2l-input-border-radius: 0.3rem;
+        --d2l-input-height: auto;
+        --d2l-input-line-height: 1.2rem;
+        --d2l-input-padding: 0.4rem 1rem;
+        --d2l-input-padding-focus: calc(0.4rem - 1px) calc(1rem - 1px);
+        --d2l-input-width: 100%;
+
+          border-radius: var(--d2l-input-border-radius);
+          border-style: solid;
+          box-sizing: border-box;
+          display: inline-block;
+          height: var(--d2l-input-height);
+          margin: 0;
+          vertical-align: middle;
+          width: var(--d2l-input-width);
+        background-color: var(--d2l-input-background-color);
+          border-color: var(--d2l-input-disabled-hover-border-color);
+          border-width: 1px;
+          box-shadow: var(--d2l-input-boxshadow);
+          padding: var(--d2l-input-padding);
+          /*transition: {
+              duration: 0.5s;
+              timing-function: ease;
+              property: background-color, border-color;
+          }*/
+      }
+
+      :host[type="checkbox"] {
+          --d2l-input-disabled-hover-border-color: var(--d2l-color-gypsum);
+          --d2l-input-background-color: var(--d2l-color-woolonardo);
+          --d2l-input-border-radius: 0.3rem;
+          --d2l-input-box-shadow: none;
+          --d2l-input-height: 1.2rem;
+          --d2l-input-padding: 0;
+          --d2l-input-padding-focus: 0;
+          --d2l-input-width: 1.2rem;
+         
+         -webkit-appearance: none;
+   -moz-appearance:    none;
+   appearance:         none;
+          background-position: center center;
+          background-repeat: no-repeat;
+
+      }
+
+      :host[type="checkbox"]:checked {
+          background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%2372777a%22%20fill-rule%3D%22evenodd%22%20d%3D%22M20.76%206.324L12.28%2019.29l-.02.03c-.29.44-.77.68-1.26.68-.27%200-.54-.07-.79-.22l-6.5-3.998c-.7-.44-.92-1.36-.49-2.07.44-.7%201.36-.92%202.07-.49l5.25%203.23%207.7-11.77c.46-.7%201.39-.89%202.08-.44.69.462.89%201.392.44%202.082z%22%2F%3E%3C%2Fsvg%3E");
+      }
+
+      :host[type="email"],
+      :host[type="password"],
+      :host[type="text"],
+      :host[type="url"] {
+          color: var(--d2l-color-ferrite);
+		font-family: inherit;
+		font-size: 1rem;
+		font-weight: 300;
+		letter-spacing: 0.015rem;
+		line-height: var(--d2l-input-line-height);
+      }
+
+      :host[type="email"]::placeholder,
+      :host[type="password"]::placeholder,
+      :host[type="text"]::placeholder,
+      :host[type="url"]::placeholder {
+          color: var(--d2l-input-placeholder-color);
+      }
+
+      :host::hover::disabled {
+          background-color: var(--d2l-input-disabled-hover-background-color);
+          border-color: var(--d2l-input-disabled-hover-border-color);
+          border-width: 1px;
+          box-shadow: var(--d2l-input-boxshadow);
+          padding: var(--d2l-input-padding);
+      }
+
+      :host:hover,
+      :host:focus,
+      :host.vui-input-focus {
+          border-color: var(--d2l-color-celestine);
+          border-width: 2px;
+          outline-width: 0;
+          padding: var(--d2l-input-padding-focus);
+      }
+
+	:host:[aria-invalid='true'] {
+		border-color: var(--d2l-input-aria-invalid-border-color);
+	}
+
+	:host:disabled {
+		opacity: 0.5;
+	}
+
+	:host::-webkit-search-cancel-button {
+		display: none;
+	}
+
+	:host::-ms-clear {
+		display: none;
+		width: 0;
+		height: 0;
+	}
+
+    </style>
+    <content></content>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'd2l-input',
+      extends: 'input',
+      properties: {
+        
+      },
+
+    });
+  </script>
+</dom-module>

@@ -1,9 +1,15 @@
 {
-  "name": "vui-input",
-  "main": "input.scss",
+  "name": "d2l-input",
+  "main": "d2l-input.html",
   "dependencies": {
-    "d2l-colors": "^2.1.0",
-    "vui-focus": "~0.7.1"
+    "polymer": "Polymer/polymer#^1.4.0",
+    "d2l-colors": "^2.1.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "web-component-tester": "^4.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
   },
   "license": "Apache-2.0",
   "ignore": [
